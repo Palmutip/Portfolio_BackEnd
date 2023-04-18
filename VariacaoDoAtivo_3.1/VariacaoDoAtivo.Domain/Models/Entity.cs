@@ -9,8 +9,8 @@ namespace VariacaoDoAtivo.Domain
     {
         [Key]
         public Guid Id { get; set; }
-        public DateTime DataInclusao { get; set; } = DateTime.Now;
+        public DateTime DataInclusao { get; set; }
         public DateTime? DataAlteracao { get; set; }
-        public bool IsDeleted { get; set; } = false;
+        public bool IsDeleted { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace VariacaoDoAtivo.Application
 {
@@ -13,12 +14,14 @@ namespace VariacaoDoAtivo.Application
         private readonly IVariacaoRepository variacaoRepository;
         private readonly IYahooFinanceService yahooFinanceService;
         private readonly IVariacaoBusiness variacaoBusiness;
+        private readonly IMapper mapper;
 
-        public VariacaoService(IVariacaoRepository variacaoRepository, IYahooFinanceService yahooFinanceService, IVariacaoBusiness variacaoBusiness)
+        public VariacaoService(IVariacaoRepository variacaoRepository, IYahooFinanceService yahooFinanceService, IVariacaoBusiness variacaoBusiness, IMapper mapper)
         {
             this.variacaoRepository = variacaoRepository;
             this.yahooFinanceService = yahooFinanceService;
             this.variacaoBusiness = variacaoBusiness;
+            this.mapper = mapper;
         }
 
         public List<VariacaoViewModel> Get()
@@ -27,9 +30,7 @@ namespace VariacaoDoAtivo.Application
 
             IEnumerable<Variacao> _variacoes = this.variacaoRepository.GetAll();
 
-            foreach(var item in _variacoes)
-                _variacaoViewModels.Add(new VariacaoViewModel() { Dia = item.Dia, Data = item.Data, Valor = item.Valor, VariacaoRelacaoPrimeiraData = item.VariacaoRelacaoPrimeiraData, VaricaoRelacaoD1 = item.VaricaoRelacaoD1 });
-
+            _variacaoViewModels = mapper.Map<List<VariacaoViewModel>>(_variacoes);
 
             return _variacaoViewModels;
         }
