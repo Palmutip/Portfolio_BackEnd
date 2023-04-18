@@ -7,6 +7,7 @@ using SS.Tecnologia.YahooFinance.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VariacaoDoAtivo.Domain.Business;
 
 namespace VariacaoDoAtivo.IoC
 {

@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace SS.Tecnologia.RDStation.Model
 {
+    /// <summary>
+    /// Campos padrão para os contatos cadastrados na RD Station
+    /// </summary>
     public class ContatoRD
     {
+        public ContatoRD()
+        {
+            email = string.Empty;
+            name = string.Empty;
+            job_title = string.Empty;
+            state = string.Empty;
+            city = string.Empty;    
+            mobile_phone = string.Empty;
+            website = string.Empty;
+            personal_phone = string.Empty;
+        }
+
         public string email { get; set; }
         public string name { get; set; }
         public string job_title { get; set; }
