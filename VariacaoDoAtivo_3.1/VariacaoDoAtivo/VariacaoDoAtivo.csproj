@@ -13,6 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.24" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.32">
@@ -32,6 +34,7 @@
     <ProjectReference Include="..\VariacaoDoAtivo.Application\VariacaoDoAtivo.Application.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Data\VariacaoDoAtivo.Data.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj" />
+    <ProjectReference Include="..\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -6,8 +6,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using VariacaoDoAtivo.Application;
 using VariacaoDoAtivo.Data;
 using VariacaoDoAtivo.IoC;
+using VariacaoDoAtivo.Swagger;
 
 namespace VariacaoDoAtivo
 {
@@ -25,10 +27,13 @@ namespace VariacaoDoAtivo
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<VariacaoDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("FinanceiroDB")).EnableSensitiveDataLogging());
+            services.AddDbContext<VariacaoDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FinanceiroDB")).EnableSensitiveDataLogging());
 
             NativeInjector.RegisterServices(services);
+
+            services.AddAutoMapper(typeof(AutoMapperSetup));
+
+            services.AddSwaggerConfiguration();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -50,6 +55,8 @@ namespace VariacaoDoAtivo
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseSwaggerConfiguration();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

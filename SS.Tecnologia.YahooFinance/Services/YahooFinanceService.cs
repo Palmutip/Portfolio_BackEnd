@@ -25,37 +25,39 @@ namespace SS.Tecnologia.YahooFinance.Services
         {
             try
             {
-                HttpClient _httpClient = new HttpClient();
+                using (var client = new HttpClient())
+                {
+                    // Cria um objeto DateTime com a data/hora especificada
+                    DateTime data = new DateTime(2023, 01, 01, 0, 1, 0);
 
-                // Cria um objeto DateTime com a data/hora especificada
-                DateTime data = new DateTime(2023, 01, 01, 0, 1, 0);
+                    // Obtém uma instância do fuso horário -03:00
+                    TimeZoneInfo fusoHorario = TimeZoneInfo.Local;
 
-                // Obtém uma instância do fuso horário -03:00
-                TimeZoneInfo fusoHorario = TimeZoneInfo.Local;//.FindSystemTimeZoneById("America/Sao_Paulo");
+                    // Converte a data/hora para o fuso horário -03:00
+                    DateTime dataFusoHorario = TimeZoneInfo.ConvertTime(data, fusoHorario);
 
-                // Converte a data/hora para o fuso horário -03:00
-                DateTime dataFusoHorario = TimeZoneInfo.ConvertTime(data, fusoHorario);
+                    // Cria um objeto DateTimeOffset com a data/hora e o fuso horário especificados
+                    DateTimeOffset dateTimeOffset = new DateTimeOffset(dataFusoHorario, fusoHorario.GetUtcOffset(dataFusoHorario));
 
-                // Cria um objeto DateTimeOffset com a data/hora e o fuso horário especificados
-                DateTimeOffset dateTimeOffset = new DateTimeOffset(dataFusoHorario, fusoHorario.GetUtcOffset(dataFusoHorario));
+                    //Formata o datetime em segundos a partir da data de 01/01/1970 00:00:00
+                    long timestamp = dateTimeOffset.ToUnixTimeSeconds();
 
-                //Formata o datetime em segundos a partir da data de 01/01/1970 00:00:00
-                long timestamp = dateTimeOffset.ToUnixTimeSeconds();
+                    //Realiza a consulta na API finance.yahoo
+                    var response = await client.GetAsync($"https://query2.finance.yahoo.com/v8/finance/chart/{identificacaoAtivo}?period1={timestamp}&period2=9999999999&interval=1d");
 
-                //Realiza a consulta na API finance.yahoo
-                var response = await _httpClient.GetAsync($"https://query2.finance.yahoo.com/v8/finance/chart/{identificacaoAtivo}?period1={timestamp}&period2=9999999999&interval=1d");
+                    //Captura o 'Content' retornado pela consulta
+                    var content = await response.Content.ReadAsStringAsync();
 
-                //Captura o 'Content' retornado pela consulta
-                var content = await response.Content.ReadAsStringAsync();
+                    //Deserializa o objeto 
+                    var result = JsonConvert.DeserializeObject<Ativo>(content);
 
-                //Deserializa o objeto 
-                var result = JsonConvert.DeserializeObject<Ativo>(content);
+                    //Verifica se houve retorno da API
+                    if (result == null)
+                        throw new ArgumentNullException(nameof(result), "Retorno da API foi nulo");
 
-                //Verifica se houve retorno da API
-                if (result == null)
-                    throw new ArgumentNullException(nameof(result), "Retorno da API foi nulo");
-
-                return result;
+                    return result;
+                }
+                    
             }
             catch (Exception ex)
             {
@@ -73,37 +75,38 @@ namespace SS.Tecnologia.YahooFinance.Services
         {
             try
             {
-                HttpClient _httpClient = new HttpClient();
+                using (var client = new HttpClient())
+                {
+                    // Cria um objeto DateTime com a data/hora especificada
+                    DateTime data = new DateTime(2023, 01, 01, 0, 1, 0);
 
-                // Cria um objeto DateTime com a data/hora especificada
-                DateTime data = new DateTime(2023, 01, 01, 0, 1, 0);
+                    // Obtém uma instância do fuso horário -03:00
+                    TimeZoneInfo fusoHorario = TimeZoneInfo.Local;
 
-                // Obtém uma instância do fuso horário -03:00
-                TimeZoneInfo fusoHorario = TimeZoneInfo.Local;//.FindSystemTimeZoneById("America/Sao_Paulo");
+                    // Converte a data/hora para o fuso horário -03:00
+                    DateTime dataFusoHorario = TimeZoneInfo.ConvertTime(data, fusoHorario);
 
-                // Converte a data/hora para o fuso horário -03:00
-                DateTime dataFusoHorario = TimeZoneInfo.ConvertTime(data, fusoHorario);
+                    // Cria um objeto DateTimeOffset com a data/hora e o fuso horário especificados
+                    DateTimeOffset dateTimeOffset = new DateTimeOffset(dataFusoHorario, fusoHorario.GetUtcOffset(dataFusoHorario));
 
-                // Cria um objeto DateTimeOffset com a data/hora e o fuso horário especificados
-                DateTimeOffset dateTimeOffset = new DateTimeOffset(dataFusoHorario, fusoHorario.GetUtcOffset(dataFusoHorario));
+                    //Formata o datetime em segundos a partir da data de 01/01/1970 00:00:00
+                    long timestamp = dateTimeOffset.ToUnixTimeSeconds();
 
-                //Formata o datetime em segundos a partir da data de 01/01/1970 00:00:00
-                long timestamp = dateTimeOffset.ToUnixTimeSeconds();
+                    //Realiza a consulta na API finance.yahoo
+                    var response = client.GetAsync($"https://query2.finance.yahoo.com/v8/finance/chart/{identificacaoAtivo}?period1={timestamp}&period2=9999999999&interval=1d");
 
-                //Realiza a consulta na API finance.yahoo
-                var response = _httpClient.GetAsync($"https://query2.finance.yahoo.com/v8/finance/chart/{identificacaoAtivo}?period1={timestamp}&period2=9999999999&interval=1d");
+                    //Captura o 'Content' retornado pela consulta
+                    var content = response.Result.Content.ReadAsStringAsync();
 
-                //Captura o 'Content' retornado pela consulta
-                var content = response.Result.Content.ReadAsStringAsync();
+                    //Deserializa o objeto 
+                    var result = JsonConvert.DeserializeObject<Ativo>(content.Result);
 
-                //Deserializa o objeto 
-                var result = JsonConvert.DeserializeObject<Ativo>(content.Result);
+                    //Verifica se houve retorno da API
+                    if (result == null)
+                        throw new ArgumentNullException(nameof(result), "Retorno da API foi nulo");
 
-                //Verifica se houve retorno da API
-                if (result == null)
-                    throw new ArgumentNullException(nameof(result), "Retorno da API foi nulo");
-
-                return result;
+                    return result;
+                }
             }
             catch (Exception ex)
             {

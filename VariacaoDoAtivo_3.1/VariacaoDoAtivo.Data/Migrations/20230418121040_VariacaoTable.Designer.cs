@@ -10,8 +10,8 @@ using VariacaoDoAtivo.Data;
 namespace VariacaoDoAtivo.Data.Migrations
 {
     [DbContext(typeof(VariacaoDbContext))]
-    [Migration("20230417134523_Initial")]
-    partial class Initial
+    [Migration("20230418121040_VariacaoTable")]
+    partial class VariacaoTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
