@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace VariacaoDoAtivo.Domain
+namespace VariacaoDoAtivo.Domain.Business
 {
     /// <summary>
     /// Classe responsável por formatar os resultados após obter os dados da API
@@ -55,8 +55,8 @@ namespace VariacaoDoAtivo.Domain
                     else
                     {
                         var openD1 = chart.Indicators?.Quote?.FirstOrDefault()?.Open?[periodos.Count - 31 + index];
-                        var PorcentagemDiaMenosUm = ((open * 100) / openD1) - 100;
-                        var PorcentagemEmRelacaoAPrimeiraData = ((open * 100) / chart.Indicators?.Quote?.FirstOrDefault()?.Open?[periodos.Count() - 30]) - 100;
+                        var PorcentagemDiaMenosUm = open * 100 / openD1 - 100;
+                        var PorcentagemEmRelacaoAPrimeiraData = open * 100 / chart.Indicators?.Quote?.FirstOrDefault()?.Open?[periodos.Count() - 30] - 100;
                         variacao.VaricaoRelacaoD1 = (Convert.ToDecimal(PorcentagemDiaMenosUm) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
                         variacao.VariacaoRelacaoPrimeiraData = (Convert.ToDecimal(PorcentagemEmRelacaoAPrimeiraData) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
                     }
