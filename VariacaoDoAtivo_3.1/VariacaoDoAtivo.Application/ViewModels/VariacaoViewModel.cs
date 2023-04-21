@@ -4,9 +4,8 @@ using System.Text;
 
 namespace VariacaoDoAtivo.Application
 {
-    public class VariacaoViewModel
+    public class VariacaoViewModel : EntityViewModel
     {
-        public Guid Id { get; set; }
         public int Dia { get; set; }
         public string Data { get; set; } = string.Empty;
         public string Valor { get; set; } = string.Empty;

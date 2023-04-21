@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VariacaoDoAtivo.Application\VariacaoDoAtivo.Application.csproj" />
+    <ProjectReference Include="..\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Data\VariacaoDoAtivo.Data.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj" />

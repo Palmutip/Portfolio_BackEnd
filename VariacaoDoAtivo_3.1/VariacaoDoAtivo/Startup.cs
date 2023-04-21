@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,10 +7,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Text;
 using VariacaoDoAtivo.Application;
+using VariacaoDoAtivo.Auth.Models;
 using VariacaoDoAtivo.Data;
 using VariacaoDoAtivo.IoC;
 using VariacaoDoAtivo.Swagger;
+using Microsoft.IdentityModel.Tokens;
 
 namespace VariacaoDoAtivo
 {
@@ -34,6 +38,25 @@ namespace VariacaoDoAtivo
             services.AddAutoMapper(typeof(AutoMapperSetup));
 
             services.AddSwaggerConfiguration();
+
+            var chave = Encoding.ASCII.GetBytes(Settings.Secret);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(chave),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -66,6 +89,9 @@ namespace VariacaoDoAtivo
             }
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();           
 
             app.UseEndpoints(endpoints =>
             {
