@@ -41,7 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.YahooFinance"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Swagger", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj", "{3D48CC01-1B31-4B1E-8014-DB02BD99BB99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariacaoDoAtivo.Auth", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj", "{251F925D-BB2C-4B51-9D84-0442A8105AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Auth", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj", "{251F925D-BB2C-4B51-9D84-0442A8105AAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Tests", "0-Tests", "{5037952C-42E5-4612-8E6F-452ED6E373DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariacaoDoAtivo.Application.Tests", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application.Tests\VariacaoDoAtivo.Application.Tests.csproj", "{DD0715F4-AE5C-4218-A63D-79D56009DE55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,10 @@ Global
 		{251F925D-BB2C-4B51-9D84-0442A8105AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251F925D-BB2C-4B51-9D84-0442A8105AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251F925D-BB2C-4B51-9D84-0442A8105AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +124,8 @@ Global
 		{AC1C3832-630E-4EFA-B865-E78DF97C8DBF} = {6A278EA8-E895-4B34-AC17-78899EE17B6B}
 		{3D48CC01-1B31-4B1E-8014-DB02BD99BB99} = {ADB24DFD-6FCC-42DB-B605-225F47C1A634}
 		{251F925D-BB2C-4B51-9D84-0442A8105AAC} = {ADB24DFD-6FCC-42DB-B605-225F47C1A634}
+		{5037952C-42E5-4612-8E6F-452ED6E373DC} = {F8CF0E78-67B3-4B20-B3F3-4CE9C991C695}
+		{DD0715F4-AE5C-4218-A63D-79D56009DE55} = {5037952C-42E5-4612-8E6F-452ED6E373DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A26576C-98A7-4C14-9761-8A7A31FD31F5}

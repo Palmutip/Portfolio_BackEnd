@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Domain\VariacaoDoAtivo.Domain.csproj" />
   </ItemGroup>
 

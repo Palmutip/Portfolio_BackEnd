@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using VariacaoDoAtivo.Auth.Services;
 using VariacaoDoAtivo.Domain;
 
 namespace VariacaoDoAtivo.Application
@@ -31,7 +32,7 @@ namespace VariacaoDoAtivo.Application
         public UsuarioViewModel GetById(string id)
         {
             if (!Guid.TryParse(id, out Guid usuarioID))
-                throw new Exception("O usário não possui um ID válido!");
+                throw new Exception("ID do usuário é inválido!");
 
             Usuario _usuario = this.usuarioRepository.Find(x => x.Id == usuarioID && !x.IsDeleted);
 
@@ -43,6 +44,11 @@ namespace VariacaoDoAtivo.Application
 
         public bool Post(UsuarioViewModel usuarioViewModel)
         {
+            if (usuarioViewModel.Id != Guid.Empty)
+                throw new Exception("ID do usuário deve ser vazio!");
+
+            Validator.ValidateObject(usuarioViewModel, new ValidationContext(usuarioViewModel), true);
+
             var _usuario = mapper.Map<Usuario>(usuarioViewModel);
 
             this.usuarioRepository.Create(_usuario);
@@ -52,6 +58,9 @@ namespace VariacaoDoAtivo.Application
 
         public bool Put(UsuarioViewModel usuarioViewModel)
         {
+            if (usuarioViewModel.Id == Guid.Empty)
+                throw new Exception("ID do usuário é inválido!");
+
             Usuario _usuario = this.usuarioRepository.Find(x => x.Id == usuarioViewModel.Id && !x.IsDeleted);
 
             if (null == _usuario)
@@ -67,7 +76,7 @@ namespace VariacaoDoAtivo.Application
         public bool Delete(string id)
         {
             if (!Guid.TryParse(id, out Guid usuarioID))
-                throw new Exception("O usário não possui um ID válido!");
+                throw new Exception("ID do usuário é inválido!");
 
             Usuario _usuario = this.usuarioRepository.Find(x => x.Id == usuarioID && !x.IsDeleted);
 
@@ -78,9 +87,17 @@ namespace VariacaoDoAtivo.Application
 
         }
 
-        public UserAuthenticateResponseViewModel Authenticate(UserAuthenticateRequestViewModel user)
+        public UserAuthenticateResponseViewModel Authenticate(UserAuthenticateRequestViewModel usuario)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(usuario.Email) || string.IsNullOrEmpty(usuario.Senha))
+                throw new Exception("Os campos E-mail e Senha são obrigatórios!");
+
+            Usuario _usuario = this.usuarioRepository.Find(x => !x.IsDeleted && x.Email.ToLower() == usuario.Email.ToLower());
+
+            if (null == _usuario)
+                throw new Exception("Usuário não encontrado");
+
+            return new UserAuthenticateResponseViewModel(mapper.Map<UsuarioViewModel>(_usuario), TokenService.GenerateToken(_usuario));
         }
     }
 }
