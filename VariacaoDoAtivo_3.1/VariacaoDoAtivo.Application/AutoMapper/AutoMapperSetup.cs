@@ -13,12 +13,14 @@ namespace VariacaoDoAtivo.Application
             #region ViewModel -> Domain
 
             CreateMap<VariacaoViewModel, Variacao>();
+            CreateMap<UsuarioViewModel, Usuario>();
 
             #endregion
 
             #region Domain -> ViewModel
 
             CreateMap<Variacao, VariacaoViewModel>();
+            CreateMap<Usuario, UsuarioViewModel>();
 
             #endregion
         }

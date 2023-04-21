@@ -10,8 +10,8 @@ using VariacaoDoAtivo.Data;
 namespace VariacaoDoAtivo.Data.Migrations
 {
     [DbContext(typeof(VariacaoDbContext))]
-    [Migration("20230418121040_VariacaoTable")]
-    partial class VariacaoTable
+    [Migration("20230421002018_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,44 @@ namespace VariacaoDoAtivo.Data.Migrations
                 .HasAnnotation("ProductVersion", "3.1.32")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("VariacaoDoAtivo.Domain.Usuario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataInclusao")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 4, 20, 21, 20, 18, 619, DateTimeKind.Local).AddTicks(6435));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Teste");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
+                });
 
             modelBuilder.Entity("VariacaoDoAtivo.Domain.Variacao", b =>
                 {
@@ -36,13 +74,17 @@ namespace VariacaoDoAtivo.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataInclusao")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 4, 20, 21, 20, 18, 620, DateTimeKind.Local).AddTicks(7331));
 
                     b.Property<int>("Dia")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Valor")
                         .HasColumnType("nvarchar(max)");

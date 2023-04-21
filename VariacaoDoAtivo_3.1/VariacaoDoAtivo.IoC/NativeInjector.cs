@@ -18,6 +18,7 @@ namespace VariacaoDoAtivo.IoC
             #region Services
 
             services.AddScoped<IVariacaoService, VariacaoService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IYahooFinanceService, YahooFinanceService>();
 
             #endregion
@@ -25,6 +26,7 @@ namespace VariacaoDoAtivo.IoC
             #region Repositories
 
             services.AddScoped<IVariacaoRepository, VariacaoRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             #endregion
 

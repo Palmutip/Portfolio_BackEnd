@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VariacaoDoAtivo.Application;
-using VariacaoDoAtivo.Domain;
-using SS.Tecnologia.YahooFinance.Inferfaces;
 
 namespace VariacaoDoAtivo.Controllers
 {
@@ -10,14 +8,10 @@ namespace VariacaoDoAtivo.Controllers
     public class VariacaoController : ControllerBase
     {
         private readonly IVariacaoService variacaoService;
-        private readonly IYahooFinanceService yahooFinanceService;
-        private readonly IVariacaoBusiness variacaoBusiness;
 
-        public VariacaoController(IVariacaoService variacaoService, IYahooFinanceService yahooFinanceService, IVariacaoBusiness variacaoBusiness)
+        public VariacaoController(IVariacaoService variacaoService)
         {
             this.variacaoService = variacaoService;
-            this.yahooFinanceService = yahooFinanceService;
-            this.variacaoBusiness = variacaoBusiness;
         }
 
         [HttpGet]
