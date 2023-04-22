@@ -31,11 +31,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\autenticacao\app-interceptor.module.ts" />
+    <None Remove="ClientApp\src\app\_data-services\usuario.data-service.ts" />
+    <None Remove="ClientApp\src\app\_data-services\variacao.data-service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\VariacaoDoAtivo.Application\VariacaoDoAtivo.Application.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Data\VariacaoDoAtivo.Data.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj" />
     <ProjectReference Include="..\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\autenticacao\app-interceptor.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_data-services\usuario.data-service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_data-services\variacao.data-service.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

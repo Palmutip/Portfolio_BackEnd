@@ -1,0 +1,52 @@
+<div *ngIf="isAuthenticate">
+    <p>Bem vindo <b>({{usuarioLogado?.usuario?.nome}})</b></p>
+    <button class="btn-primary" (click)="showList = !showList">{{showList ? 'Novo' : 'Lista'}}</button>
+    <p>Usuarios ({{usuarios?.length}})</p>
+    <div *ngIf="showList">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Ações</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios">
+                    <td>
+                        <button class="btn-primary" (click)="openDetalhes(usuario)">Editar</button>
+                        <button class="btn-danger" (click)="delete(usuario)">Excluir</button>
+                    </td>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="!showList">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputNome">Nome:</label>
+                <input type="text" class="form-control" id="exampleInputNome" placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Endereço de e-mail:</label>
+                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="exemplo@dominio.com" [(ngModel)]="usuario.email" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+        </form>
+    </div>
+</div>
+    <div *ngIf="!isAuthenticate">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail">Endereço de e-mail:</label>
+                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="exemplo@dominio.com" [(ngModel)]="usuarioLogin.email" name="emailLogin">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputSenha">Senha:</label>
+                <input type="password" class="form-control" id="exampleInputSenha" placeholder="Senha" [(ngModel)]="usuarioLogin.senha" name="senhaLogin">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="autenticar()">Login</button>
+        </form>
+    </div>
