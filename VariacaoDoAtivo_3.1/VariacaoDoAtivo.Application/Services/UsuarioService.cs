@@ -92,7 +92,7 @@ namespace VariacaoDoAtivo.Application
             if (string.IsNullOrEmpty(usuario.Email) || string.IsNullOrEmpty(usuario.Senha))
                 throw new Exception("Os campos E-mail e Senha são obrigatórios!");
 
-            Usuario _usuario = this.usuarioRepository.Find(x => !x.IsDeleted && x.Email.ToLower() == usuario.Email.ToLower());
+            Usuario _usuario = this.usuarioRepository.Find(x => !x.IsDeleted && x.Email.ToLower() == usuario.Email.ToLower() && x.Senha == usuario.Senha);
 
             if (null == _usuario)
                 throw new Exception("Usuário não encontrado");

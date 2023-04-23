@@ -1,14 +1,135 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<header>
+  <div class="logo">
+    <h1>Portfólio - Pedro Palmuti</h1>
+  </div>
+</header>
+<main>
+  <section>
+    <p>
+      <span>
+        Seja bem vindo ao meu portfólio de back-end. Este site foi feito com a proposta de demonstrar meu conhecimento com C#, .NET Core, Testes unitários e a abordagem DDD.
+      </span>
+      </p>
+    <p>
+      <span>
+        Este site vem com os seguintes itens abaixo:
+      </span>
+    </p>
+    <ul>
+      <li [routerLinkActive]="['link-active']">
+        <a href="swagger/ui" target="_blank">Swagger</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a [routerLink]="['/usuarios']" target="_blank">Cadastro de usuários</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a [routerLink]="['/variacoes']" target="_blank">Consulta de Ativos</a>
+      </li>
+    </ul> 
+  </section>
+  <section>
+    <p>
+      <span>
+        Tambem foram incluídos alguns componentes de Front-End para demonstrar minha familiaridade com o assunto. São eles:
+      </span>
+    </p>
+    <h4>Toastr Notifications</h4>
+    <ul style="list-style: none;display: flex; justify-content: space-evenly;">
+      <li>
+        <button (click)="ShowSuccess()" class="btn btn-success">toastr Sucesso</button>
+      </li>
+      <li>
+        <button (click)="ShowError()" class="btn btn-danger">toastr Erro</button>
+      </li>
+      <li>
+        <button (click)="ShowWarning()" class="btn btn-warning">toastr Aviso</button>
+      </li>
+      <li>
+        <button (click)="ShowInformation()" class="btn btn-primary">toastr Informação</button>
+      </li>
+    </ul>
+    <h4>Font awesome Icons</h4>
+    <ul style="list-style: none;">
+      <li><fa-icon [icon]="faNewspaper"></fa-icon> Notícias atualizadas sobre o mercado financeiro</li>
+      <li><fa-icon [icon]="faChartLine"></fa-icon> Gráficos atualizados em tempo real</li>
+      <li><fa-icon [icon]="faMoneyBillAlt"></fa-icon> Cotações das principais moedas</li>
+    </ul>
+    <h4>Bootstrap</h4>
+    <div style="display: flex;">
+      <div style="width: 100%; padding-inline: 8px; border: double;">
+        <h5 style="text-align: center;">Tables</h5>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="width: 100%; padding-inline: 8px; border: double;">
+        <h5 style="text-align: center;">Forms</h5>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Endereço de e-mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome@email.com">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+    
+  </section>
+</main>
+<footer style="background-color: #0e2431;color: #fff;text-align: center; margin-top: 16px;">
+  <div style="display: flex; justify-content: space-evenly;align-items: center;">
+      <div style="text-align: initial;">
+          <p class="footer__title">Pedro Palmuti</p>
+          <!-- <div class="footer__social">
+              <a href="https://www.linkedin.com/in/palmutip/" target="_blank" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/Palmutip" target="_blank" class="footer__icon"><fa-icon [icon]="['fab', 'github']"></fa-icon><i class="bx bxl-github"></i></a>
+              <a href="https://wa.me/5535992507665" target="_blank" class="footer__icon"><i class="bx bxl-whatsapp"></i></a>
+          </div> -->
+          <p>
+              <span>Whatsapp : +55 (35) 99250-7665</span>
+              <br>
+              <span>Celular +55 (35) 99836-6666</span>
+              <br>
+              <span>Website: <a href="https://stormsoftware.com.br" target="_blank">stormsoftware.com.br</a></span>
+          </p>
+      </div>
+      <div style="place-self: center; padding-top: 16px;">
+          <img [src]="logoPng" style="height: 120px;">
+          <br>
+          <p>© 2023 copyright todos os direitos reservados</p>
+      </div>
+  </div>
+</footer>

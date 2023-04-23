@@ -12,5 +12,6 @@ namespace VariacaoDoAtivo.Application
         bool Post(string identificacaoAtivo);
         bool Put(VariacaoViewModel variacaoViewModel);
         bool Delete(string id);
+        bool Delete();
     }
 }
