@@ -16,7 +16,7 @@ O repositório por enquanto conta com apenas um projeto: Variação do Ativo.
 Trata-se de um projeto realizado para uma prova de recrutamento e seleção que pode ser encontrado no seguinte link:
 https://github.com/guideti/variacao-ativo 
 
-Trata-se de um projeto construído com .NET CORE 3.1 + Angular + SQL Server.
+O projeto foi construído com .NET CORE 3.1 + Angular + SQL Server.
 
 Para executar em sua máquina, será necessário abrir a solução com o Visual Studio 2022, e caso já não tenha, instalar os recursos necessários para a execução do Angular em sua máquina. Atente-se para alterar o arquivo `appsettings.json` para apontar para seu servidor do SQL Server e também o nome da Database desejada.
 
