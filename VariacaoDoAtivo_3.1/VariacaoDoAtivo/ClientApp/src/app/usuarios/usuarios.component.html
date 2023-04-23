@@ -37,16 +37,16 @@
         </form>
     </div>
 </div>
-    <div *ngIf="!isAuthenticate">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail">Endereço de e-mail:</label>
-                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="exemplo@dominio.com" [(ngModel)]="usuarioLogin.email" name="emailLogin">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputSenha">Senha:</label>
-                <input type="password" class="form-control" id="exampleInputSenha" placeholder="Senha" [(ngModel)]="usuarioLogin.senha" name="senhaLogin">
-            </div>
-            <button type="submit" class="btn btn-primary" (click)="autenticar()">Login</button>
-        </form>
-    </div>
+<div *ngIf="!isAuthenticate">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail">Endereço de e-mail:</label>
+            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="exemplo@dominio.com" [(ngModel)]="usuarioLogin.email" name="emailLogin">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputSenha">Senha:</label>
+            <input type="password" class="form-control" id="exampleInputSenha" placeholder="Senha" [(ngModel)]="usuarioLogin.senha" name="senhaLogin">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="autenticar()">Login</button>
+    </form>
+</div>

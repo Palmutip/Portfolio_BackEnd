@@ -43,5 +43,11 @@ namespace VariacaoDoAtivo.Controllers
         {
             return Ok(this.variacaoService.Delete(id));
         }
+
+        [HttpDelete()]
+        public IActionResult Delete()
+        {
+            return Ok(this.variacaoService.Delete());
+        }
     }
 }

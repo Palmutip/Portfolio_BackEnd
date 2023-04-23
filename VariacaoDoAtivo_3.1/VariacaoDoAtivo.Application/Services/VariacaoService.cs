@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using System.Security.Cryptography;
+using Microsoft.EntityFrameworkCore;
 
 namespace VariacaoDoAtivo.Application
 {
@@ -79,6 +80,13 @@ namespace VariacaoDoAtivo.Application
 
             return this.variacaoRepository.Delete(_variacao);
 
+        }
+
+        public bool Delete()
+        {
+            this.variacaoRepository.DeleteAll();
+
+            return true;
         }
 
     }

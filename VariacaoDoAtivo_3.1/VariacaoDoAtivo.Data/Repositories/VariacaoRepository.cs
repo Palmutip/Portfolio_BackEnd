@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace VariacaoDoAtivo.Data
 {
@@ -15,6 +18,13 @@ namespace VariacaoDoAtivo.Data
         public IEnumerable<Variacao> GetAll()
         {
             return Query(x => !x.IsDeleted);
+        }
+
+        public void DeleteAll()
+        {
+            var allEntities = DbSet.ToList();
+            DbSet.RemoveRange(allEntities);
+            Save();
         }
     }
 }

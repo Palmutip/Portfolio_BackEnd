@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioDataService } from '../_data-services/usuario.data-service';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-usuarios',
-  templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+    selector: 'app-usuarios',
+    templateUrl: './usuarios.component.html',
+    styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
 
@@ -15,18 +16,21 @@ export class UsuariosComponent implements OnInit {
     showList: boolean = true;
     isAuthenticate: boolean = false;
 
-    constructor(private usuarioDataService: UsuarioDataService) { }
+    constructor(
+        private usuarioDataService: UsuarioDataService,
+        private toastr: ToastrService
+    ) { }
 
     ngOnInit() {
-        
-  }
+
+    }
 
     get() {
-        this.usuarioDataService.get().subscribe((dados:any[]) => {
+        this.usuarioDataService.get().subscribe((dados: any[]) => {
             this.usuarios = dados;
             this.showList = true;
         }, erro => {
-            alert('erro interno do sistema');
+            this.toastr.warning('erro interno do sistema');
         })
     }
 
@@ -47,12 +51,12 @@ export class UsuariosComponent implements OnInit {
     post() {
         this.usuarioDataService.post(this.usuario).subscribe(d => {
             if (d == true) {
-                //alert('Usu�rio cadastrado com sucesso');
+                this.toastr.success('Usuário cadastrado com sucesso');
                 this.get();
                 this.usuario = {};
             }
             else {
-                alert('Erro ao cadastrar usu�rio');
+                alert('Erro ao cadastrar usuário');
             }
         }, erro => {
             console.log(erro);
@@ -63,49 +67,49 @@ export class UsuariosComponent implements OnInit {
     put() {
         this.usuarioDataService.put(this.usuario).subscribe(d => {
             if (d == true) {
-                //alert('Usu�rio atualizado com sucesso');
+                this.toastr.success('Usuário atualizado com sucesso');
                 this.get();
                 this.usuario = {};
             }
             else {
-                alert('Erro ao atualizar usu�rio');
+                this.toastr.warning('Erro ao atualizar usuário');
             }
         }, erro => {
             console.log(erro);
-            alert('erro interno do sistema');
+            this.toastr.warning('erro interno do sistema');
         })
     }
 
-    delete(usuario) {
+    delete() {
         this.usuarioDataService.delete().subscribe(d => {
             if (d == true) {
-                //alert('Usu�rio excluido com sucesso');
+                this.toastr.success('Usuário excluido com sucesso');
                 this.get();
                 this.usuario = {};
             }
             else {
-                alert('Erro ao excluir usu�rio');
+                this.toastr.warning('Erro ao excluir usuário');
             }
         }, erro => {
             console.log(erro);
-            alert('erro interno do sistema');
+            this.toastr.warning('erro interno do sistema');
         })
     }
 
     autenticar() {
         this.usuarioDataService.autenticar(this.usuarioLogin).subscribe((d: any) => {
-            //debugger;
             if (d.usuario) {
+                this.toastr.success('Usuário autenticado com sucesso!', 'Sucesso');
                 localStorage.setItem('token_usuario', JSON.stringify(d));
                 this.get();
                 this.getDadosUsuario();
             }
             else {
-                alert('Usu�rio inv�lido.');
+                this.toastr.warning('Usuário inválido.');
             }
         }, erro => {
             console.log(erro);
-            alert('erro interno do sistema');
+            this.toastr.warning('erro interno do sistema');
         })
     }
 

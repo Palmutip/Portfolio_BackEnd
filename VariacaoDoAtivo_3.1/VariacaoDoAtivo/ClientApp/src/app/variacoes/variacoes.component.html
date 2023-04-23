@@ -1,1 +1,33 @@
-<p>variacoes works!</p>
+<div *ngIf="showList">
+    <div *ngIf="!possuiDados">
+        <button class="btn btn-primary" style="margin-inline: 8px;" (click)="showList = !showList">{{showList ? 'Novo' : 'Lista'}}</button>
+    </div>
+    <div *ngIf="possuiDados">
+        <button class="btn btn-danger" style="margin-inline: 8px;" (click)="delete()">Limpar Tabela</button>
+    </div>
+    <table class="table" style="margin-block: 16px;">
+        <thead>
+            <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Variação em relação ao primeiro dia</th>
+                <th scope="col">Variação em relação ao dia anterior</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let variacao of variacoes">
+                <td>{{variacao.data}}</td>
+                <td>{{variacao.varicaoRelacaoD1}}</td>
+                <td>{{variacao.variacaoRelacaoPrimeiraData}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="!showList">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputNome">Identificação do Ativo:</label>
+            <input type="text" class="form-control" id="exampleInput" placeholder="NUBR33.SA ou PETR4.SA" [(ngModel)]="identificacaoAtivo" name="identificacaoAtivo">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+    </form>
+</div>

@@ -11,6 +11,15 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { VariacoesComponent } from './variacoes/variacoes.component';
 import { UsuarioDataService } from './_data-services/usuario.data-service';
 import { Interceptor } from './autenticacao/app-interceptor.module';
+import { ToastrModule } from 'ngx-toastr';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import { VariacaoDataService } from './_data-services/variacao.data-service';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -29,9 +38,21 @@ import { Interceptor } from './autenticacao/app-interceptor.module';
       { path: 'usuarios', component: UsuariosComponent },
       { path: 'variacoes', component: VariacoesComponent },
     ]),
-      Interceptor
+      Interceptor,
+      FontAwesomeModule,
+      ToastrModule.forRoot({
+        // positionClass: "toast-bottom-right",
+        // preventDuplicates: true,
+        // timeOut: 15000,
+        // easing: 'ease-in',
+        // easeTime: 1500
+      })
     ],
-    providers: [UsuarioDataService],
+    providers: [
+      UsuarioDataService,
+      VariacaoDataService,
+      { provide: LOCALE_ID, useValue: 'pt-BR' }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
