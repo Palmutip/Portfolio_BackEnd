@@ -230,3 +230,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/VariacaoDoAtivo_3.1/VariacaoDoAtivo/ClientApp/node_modules/.cache
