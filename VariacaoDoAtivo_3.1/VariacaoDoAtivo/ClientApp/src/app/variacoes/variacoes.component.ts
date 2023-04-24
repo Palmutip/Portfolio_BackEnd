@@ -13,6 +13,8 @@ export class VariacoesComponent implements OnInit {
   variacao: any = {};
   showList: boolean = true;
   identificacaoAtivo: string = "";
+  intervalo: number = 1;
+  range: string = "";
   possuiDados: boolean = false;
 
   constructor(
@@ -45,8 +47,8 @@ export class VariacoesComponent implements OnInit {
     }
   }
 
-  post() {
-    this.variacaoDataService.post(this.identificacaoAtivo).subscribe(d => {
+    post() {
+        this.variacaoDataService.post(this.identificacaoAtivo, this.intervalo, this.range).subscribe(d => {
       if (d == true) {
         this.toastr.success('Variação cadastrada com sucesso');
         this.get();
