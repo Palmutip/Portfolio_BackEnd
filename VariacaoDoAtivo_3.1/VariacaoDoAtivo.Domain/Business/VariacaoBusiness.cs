@@ -1,6 +1,8 @@
-﻿using SS.Tecnologia.YahooFinance.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using SS.Tecnologia.YahooFinance.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,8 @@ namespace VariacaoDoAtivo.Domain.Business
         /// <returns>Retorna o objeto formatado conforme os requisitos da operação</returns>
         public List<Variacao> RetornaVariacoes(Ativo dadosYahoo)
         {
+            var variacoes = new List<Variacao>();
+
             var chart = dadosYahoo.Chart?.Result?.FirstOrDefault();
 
             if (chart == null)
@@ -29,41 +33,35 @@ namespace VariacaoDoAtivo.Domain.Business
             var periodos = chart.Timestamp;
 
             var numPeriodos = periodos?.Count;
-            if (numPeriodos < 30)
-            {
-                return new List<Variacao>();
-            }
 
             var openList = chart.Indicators?.Quote?.FirstOrDefault()?.Open;
 
-            var variacoes = openList?
-                .Skip(Math.Max(0, openList.Count() - 30))
-                .Select((open, index) =>
+            if (null != openList && null != periodos && periodos.Count == openList.Count)
+            {
+                for (int i = 0; i < openList.Count; i++)
                 {
-                    var variacao = new Variacao
-                    {
-                        Dia = index + 1,
-                        Data = DateTimeOffset.FromUnixTimeSeconds(periodos[periodos.Count() - 30 + index]).LocalDateTime.ToString("dd/MM/yyyy"),
-                        Valor = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", open)
-                    };
+                    Variacao nova = new Variacao();
 
-                    if (index == 0)
+                    nova.Dia = i + 1;
+                    nova.Data = DateTimeOffset.FromUnixTimeSeconds(periodos[i]).LocalDateTime.ToString("dd/MM/yyyy HH:mm:ss");
+                    nova.Valor = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", openList[i]);
+
+                    if (i.Equals(0))
                     {
-                        variacao.VaricaoRelacaoD1 = "-";
-                        variacao.VariacaoRelacaoPrimeiraData = "-";
-                    }
-                    else
-                    {
-                        var openD1 = chart.Indicators?.Quote?.FirstOrDefault()?.Open?[periodos.Count - 31 + index];
-                        var PorcentagemDiaMenosUm = open * 100 / openD1 - 100;
-                        var PorcentagemEmRelacaoAPrimeiraData = open * 100 / chart.Indicators?.Quote?.FirstOrDefault()?.Open?[periodos.Count() - 30] - 100;
-                        variacao.VaricaoRelacaoD1 = (Convert.ToDecimal(PorcentagemDiaMenosUm) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
-                        variacao.VariacaoRelacaoPrimeiraData = (Convert.ToDecimal(PorcentagemEmRelacaoAPrimeiraData) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
+                        nova.VaricaoRelacaoD1 = "-";
+                        nova.VariacaoRelacaoPrimeiraData = "-";
+                        variacoes.Add(nova);
+                        continue;
                     }
 
-                    return variacao;
-                })
-                .ToList();
+                    var openD1 = openList[i - 1];
+                    var PorcentagemDiaMenosUm = openList[i] * 100 / openD1 - 100;
+                    var PorcentagemEmRelacaoAPrimeiraData = openList[i] * 100 / openList[0] - 100;
+                    nova.VaricaoRelacaoD1 = (Convert.ToDecimal(PorcentagemDiaMenosUm) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
+                    nova.VariacaoRelacaoPrimeiraData = (Convert.ToDecimal(PorcentagemEmRelacaoAPrimeiraData) / 100).ToString("P2", CultureInfo.GetCultureInfo("pt-BR")) ?? "-";
+                    variacoes.Add(nova);
+                }
+            }
 
             if (null == variacoes)
                 throw new ArgumentException($"Não foram encontradas variações de preço nos ultimos 30 pregões do ativo {chart.Meta}!");

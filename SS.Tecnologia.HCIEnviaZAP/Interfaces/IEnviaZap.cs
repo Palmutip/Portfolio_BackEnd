@@ -4,7 +4,7 @@ namespace SS.Tecnologia.HCIEnviaZAP.Interfaces
 {
     public interface IEnviaZap
     {
-        string EnviarMensagem(EnviaZapDTO enviaZap);
-        Task<string> EnviarMensagemAsync(EnviaZapDTO enviaZap);
+        string EnviarMensagem(EnviaZapDTO enviaZap, string token);
+        Task<string> EnviarMensagemAsync(EnviaZapDTO enviaZap, string token);
     }
 }

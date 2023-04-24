@@ -8,21 +8,20 @@ namespace SS.Tecnologia.HCIEnviaZAP.Models
 {
     public class EnviaZapDTO
     {
+        private int intervaloDisparo;
+        private string mensagem;
+        private string numeroTelefone;
+        private string Ddd;
+        public string Ddi;
+
+
         public EnviaZapDTO() 
         {
-            Ddi = string.Empty;
-            Ddd = string.Empty;
-            numeroTelefone = string.Empty;
-            mensagem = string.Empty;
-            token = string.Empty;
+            DDI = string.Empty;
+            DDD = string.Empty;
+            NumeroTelefone = string.Empty;
+            Mensagem = string.Empty;
         }
-
-        private int intervaloDisparo;
-        private string Ddi;
-        private string Ddd;
-        private string numeroTelefone;
-        private string mensagem;
-        private string token;
 
         /// <summary>
         /// Numero inteiro que representa o intervalo em segundos entre o disparo entre mais de uma mensagem
@@ -108,21 +107,6 @@ namespace SS.Tecnologia.HCIEnviaZAP.Models
             set
             {
                 this.mensagem = value;
-            }
-        }
-
-        /// <summary>
-        /// Token de autorização da plataforma HCI - EnviaZAP
-        /// </summary>
-        public string Token
-        {
-            get
-            {
-                return token;
-            }
-            set
-            {
-                this.token = value;
             }
         }
     }

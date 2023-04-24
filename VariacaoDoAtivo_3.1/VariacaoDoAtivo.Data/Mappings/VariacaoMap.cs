@@ -13,7 +13,7 @@ namespace VariacaoDoAtivo.Data
         {
             builder.Property(x => x.Dia).IsRequired();
 
-            builder.Property(x => x.Data).HasMaxLength(10).IsRequired();
+            builder.Property(x => x.Data).HasMaxLength(20).IsRequired();
         }
     }
 }

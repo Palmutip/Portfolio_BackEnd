@@ -14,15 +14,17 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
         /// <summary>
         /// Método para enviar a mensagem utilizando a API da HCI - EnviaZAP
         /// </summary>
+        /// <param name="enviaZap">Classe contendo os dados necessários para a integração, sendo eles o DDI, DDD, Nº do telefone e conteúdo da mensagem.</param>
+        /// <param name="token">Token fornecido pela plataforma da HCI - Enviazap</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
         /// <exception cref="Exception"></exception>
-        public string EnviarMensagem(EnviaZapDTO enviaZap)
+        public string EnviarMensagem(EnviaZapDTO enviaZap, string token)
         {
             try
             {
                 //Valida se o numero possui 9 ou 8 digitos e já incrementa o DDD
-                ValidarNumero(enviaZap);
+                ValidarNumero(enviaZap, token);
 
                 //Definição de protocolo de segurança
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -40,7 +42,7 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
                     var data = new StringContent(conteudo, Encoding.UTF8, "application/json");
 
                     //Realizando o método POST na API e já coletando o resultado para chamada permanecer sícrona
-                    HttpResponseMessage dados = client.PostAsync("https://api.hcisistemas.com.br/sendMessage?token=" + enviaZap.Token, data).Result;
+                    HttpResponseMessage dados = client.PostAsync("https://api.hcisistemas.com.br/sendMessage?token=" + token, data).Result;
 
                     //Intervalo em segundos para ler o conteúdo e para enviar a proxima mensagem caso este método esteja dentro de um laço de repetição
                     Thread.Sleep(enviaZap.IntervaloDisparo * 1000);
@@ -67,15 +69,17 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
         /// <summary>
         /// Método para enviar a mensagem utilizando a API da HCI - EnviaZAP
         /// </summary>
+        /// <param name="enviaZap">Classe contendo os dados necessários para a integração, sendo eles o DDI, DDD, Nº do telefone e conteúdo da mensagem.</param>
+        /// <param name="token">Token fornecido pela plataforma da HCI - Enviazap</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
         /// <exception cref="Exception"></exception>
-        public async Task<string> EnviarMensagemAsync(EnviaZapDTO enviaZap)
+        public async Task<string> EnviarMensagemAsync(EnviaZapDTO enviaZap, string token)
         {
             try
             {
                 //Valida se o numero possui 9 ou 8 digitos e já incrementa o DDD
-                ValidarNumero(enviaZap);
+                ValidarNumero(enviaZap, token);
 
                 //Definição de protocolo de segurança
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
@@ -93,7 +97,7 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
                     var data = new StringContent(conteudo, Encoding.UTF8, "application/json");
 
                     //Realizando o método POST na API e já coletando o resultado para chamada permanecer sícrona
-                    HttpResponseMessage dados = await client.PostAsync("https://api.hcisistemas.com.br/sendMessage?token=" + enviaZap.Token, data);
+                    HttpResponseMessage dados = await client.PostAsync("https://api.hcisistemas.com.br/sendMessage?token=" + token, data);
 
                     //Intervalo em segundos para ler o conteúdo e para enviar a proxima mensagem caso este método esteja dentro de um laço de repetição
                     Thread.Sleep(enviaZap.IntervaloDisparo * 1000);
@@ -121,11 +125,11 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
         /// Valida se o numero possui 9 ou 8 digitos e já incrementa o DDD
         /// </summary>
         /// <exception cref="ArgumentException"></exception>
-        private void ValidarNumero(EnviaZapDTO enviaZap)
+        private void ValidarNumero(EnviaZapDTO enviaZap, string token)
         {
             try
             {
-                ValidarClasse(enviaZap);
+                ValidarClasse(enviaZap, token);
 
                 enviaZap.NumeroTelefone = enviaZap.NumeroTelefone.Trim(',', '-', '(', ')', ' ');
 
@@ -166,17 +170,20 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
         /// Verifique se existem elementos obrigatórios que estão nulos ou vazios.
         /// </summary>
         /// <exception cref="ArgumentException"></exception>
-        private void ValidarClasse(EnviaZapDTO enviaZap)
+        private void ValidarClasse(EnviaZapDTO enviaZap, string token)
         {
             try
             {
                 if (enviaZap.IntervaloDisparo == 0)
                     enviaZap.IntervaloDisparo = 5;
 
-                if (null == enviaZap.DDD || null == enviaZap.DDI || null == enviaZap.NumeroTelefone || null == enviaZap.Mensagem || null == enviaZap.Token)
+                if (null == token || "" == token)
+                    throw new Exception("O token é obrigatório para o funcionamento da integração.");
+
+                if (null == enviaZap.DDD || null == enviaZap.DDI || null == enviaZap.NumeroTelefone || null == enviaZap.Mensagem)
                     throw new ArgumentException("Classe não permite que nenhuma propriedade esteja nula.");
 
-                if ("" == enviaZap.DDD || "" == enviaZap.DDI || "" == enviaZap.NumeroTelefone || "" == enviaZap.Mensagem || "" == enviaZap.Token)
+                if ("" == enviaZap.DDD || "" == enviaZap.DDI || "" == enviaZap.NumeroTelefone || "" == enviaZap.Mensagem )
                     throw new ArgumentException("Classe não permite que nenhuma propriedade esteja em branco.");
             }
             catch (Exception ex)

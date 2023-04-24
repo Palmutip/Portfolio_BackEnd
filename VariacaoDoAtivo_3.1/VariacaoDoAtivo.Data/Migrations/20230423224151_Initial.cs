@@ -12,7 +12,7 @@ namespace VariacaoDoAtivo.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DataInclusao = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2023, 4, 20, 21, 20, 18, 619, DateTimeKind.Local).AddTicks(6435)),
+                    DataInclusao = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2023, 4, 23, 19, 41, 51, 170, DateTimeKind.Local).AddTicks(8585)),
                     DataAlteracao = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false, defaultValue: false),
                     Nome = table.Column<string>(maxLength: 100, nullable: false),
@@ -29,11 +29,11 @@ namespace VariacaoDoAtivo.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    DataInclusao = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2023, 4, 20, 21, 20, 18, 620, DateTimeKind.Local).AddTicks(7331)),
+                    DataInclusao = table.Column<DateTime>(nullable: false, defaultValue: new DateTime(2023, 4, 23, 19, 41, 51, 171, DateTimeKind.Local).AddTicks(5572)),
                     DataAlteracao = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false, defaultValue: false),
                     Dia = table.Column<int>(nullable: false),
-                    Data = table.Column<string>(maxLength: 10, nullable: false),
+                    Data = table.Column<string>(maxLength: 20, nullable: false),
                     Valor = table.Column<string>(nullable: true),
                     VaricaoRelacaoD1 = table.Column<string>(nullable: true),
                     VariacaoRelacaoPrimeiraData = table.Column<string>(nullable: true)

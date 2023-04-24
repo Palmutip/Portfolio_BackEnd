@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
+using SS.Tecnologia.YahooFinance;
 
 namespace VariacaoDoAtivo.Application
 {
@@ -47,9 +48,9 @@ namespace VariacaoDoAtivo.Application
             return mapper.Map<VariacaoViewModel>(_variacao);
         }
 
-        public bool Post(string identificacaoAtivo)
+        public bool Post(string identificacaoAtivo, Intervalo intervalo, string range = "")
         {
-            this.variacaoRepository.Create(this.variacaoBusiness.RetornaVariacoes(this.yahooFinanceService.ConsultaAtivo(identificacaoAtivo)));
+            this.variacaoRepository.Create(this.variacaoBusiness.RetornaVariacoes(this.yahooFinanceService.ConsultaAtivo(identificacaoAtivo, intervalo, range)));
 
             return true;
         }

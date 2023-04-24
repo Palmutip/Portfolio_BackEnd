@@ -10,7 +10,7 @@ using VariacaoDoAtivo.Data;
 namespace VariacaoDoAtivo.Data.Migrations
 {
     [DbContext(typeof(VariacaoDbContext))]
-    [Migration("20230421002018_Initial")]
+    [Migration("20230423224151_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace VariacaoDoAtivo.Data.Migrations
                     b.Property<DateTime>("DataInclusao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 4, 20, 21, 20, 18, 619, DateTimeKind.Local).AddTicks(6435));
+                        .HasDefaultValue(new DateTime(2023, 4, 23, 19, 41, 51, 170, DateTimeKind.Local).AddTicks(8585));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -67,8 +67,8 @@ namespace VariacaoDoAtivo.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
@@ -76,7 +76,7 @@ namespace VariacaoDoAtivo.Data.Migrations
                     b.Property<DateTime>("DataInclusao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 4, 20, 21, 20, 18, 620, DateTimeKind.Local).AddTicks(7331));
+                        .HasDefaultValue(new DateTime(2023, 4, 23, 19, 41, 51, 171, DateTimeKind.Local).AddTicks(5572));
 
                     b.Property<int>("Dia")
                         .HasColumnType("int");

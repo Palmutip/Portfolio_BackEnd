@@ -9,13 +9,15 @@
         <thead>
             <tr>
                 <th scope="col">Data</th>
-                <th scope="col">Variação em relação ao primeiro dia</th>
-                <th scope="col">Variação em relação ao dia anterior</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Variação em relação a data anterior</th>
+                <th scope="col">Variação em relação a primeiro data</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let variacao of variacoes">
                 <td>{{variacao.data}}</td>
+                <td>{{variacao.valor}}</td>
                 <td>{{variacao.varicaoRelacaoD1}}</td>
                 <td>{{variacao.variacaoRelacaoPrimeiraData}}</td>
             </tr>
@@ -25,8 +27,18 @@
 <div *ngIf="!showList">
     <form>
         <div class="form-group">
-            <label for="exampleInputNome">Identificação do Ativo:</label>
-            <input type="text" class="form-control" id="exampleInput" placeholder="NUBR33.SA ou PETR4.SA" [(ngModel)]="identificacaoAtivo" name="identificacaoAtivo">
+            <label for="TxtIdentificacaoAtivo">Identificação do Ativo:</label>
+            <input type="text" class="form-control" id="TxtIdentificacaoAtivo" placeholder="NUBR33.SA ou PETR4.SA" [(ngModel)]="identificacaoAtivo" name="identificacaoAtivo">
+            <label for="CmdIntervalo">Intervalo de busca:</label>
+            <select class="form-control" id="CmdIntervalo" [(ngModel)]="intervalo" name="intervalo">
+                <option value="0">A cada 1 minuto</option>
+                <option value="1">A cada 1 dia</option>
+                <option value="2">A cada 1 semana</option>
+                <option value="3">A cada 1 mês</option>
+                <option value="4">A cada 1 ano</option>
+            </select>
+            <label for="TxtRange">Range:</label>
+            <input type="text" class="form-control" id="TxtRange" placeholder="30d" [(ngModel)]="range" name="range">
         </div>
         <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
     </form>
