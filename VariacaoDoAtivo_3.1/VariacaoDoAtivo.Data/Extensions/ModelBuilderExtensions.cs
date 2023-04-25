@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Text;
 using VariacaoDoAtivo.Domain;
 
 namespace VariacaoDoAtivo.Data
@@ -11,9 +8,9 @@ namespace VariacaoDoAtivo.Data
     {
         public static ModelBuilder ApplyGlobalConfigurations(this ModelBuilder modelBuilder)
         {
-            foreach(var entityType in modelBuilder.Model.GetEntityTypes())
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
-                foreach(var property in entityType.GetProperties())
+                foreach (var property in entityType.GetProperties())
                 {
                     switch (property.Name)
                     {

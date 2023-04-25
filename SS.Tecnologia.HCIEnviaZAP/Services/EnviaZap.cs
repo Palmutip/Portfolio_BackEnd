@@ -183,7 +183,7 @@ namespace SS.Tecnologia.HCIEnviaZAP.Services
                 if (null == enviaZap.DDD || null == enviaZap.DDI || null == enviaZap.NumeroTelefone || null == enviaZap.Mensagem)
                     throw new ArgumentException("Classe não permite que nenhuma propriedade esteja nula.");
 
-                if ("" == enviaZap.DDD || "" == enviaZap.DDI || "" == enviaZap.NumeroTelefone || "" == enviaZap.Mensagem )
+                if ("" == enviaZap.DDD || "" == enviaZap.DDI || "" == enviaZap.NumeroTelefone || "" == enviaZap.Mensagem)
                     throw new ArgumentException("Classe não permite que nenhuma propriedade esteja em branco.");
             }
             catch (Exception ex)

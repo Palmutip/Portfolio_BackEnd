@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using SS.Tecnologia.RDStation.Interfaces;
 using SS.Tecnologia.RDStation.Model;
 using System.Net;
 using System.Text;
-using SS.Tecnologia.RDStation.Interfaces;
 
 namespace SS.Tecnologia.RDStation
 {

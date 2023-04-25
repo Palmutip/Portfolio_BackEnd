@@ -1,19 +1,18 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using VariacaoDoAtivo.Application;
 using VariacaoDoAtivo.Auth.Models;
 using VariacaoDoAtivo.Data;
 using VariacaoDoAtivo.IoC;
 using VariacaoDoAtivo.Swagger;
-using Microsoft.IdentityModel.Tokens;
 
 namespace VariacaoDoAtivo
 {
@@ -91,7 +90,7 @@ namespace VariacaoDoAtivo
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization();           
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

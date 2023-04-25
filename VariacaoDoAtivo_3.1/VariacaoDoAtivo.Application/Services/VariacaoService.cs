@@ -1,14 +1,9 @@
-﻿using VariacaoDoAtivo.Domain;
+﻿using AutoMapper;
+using SS.Tecnologia.YahooFinance;
 using SS.Tecnologia.YahooFinance.Inferfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using System.Security.Cryptography;
-using Microsoft.EntityFrameworkCore;
-using SS.Tecnologia.YahooFinance;
+using VariacaoDoAtivo.Domain;
 
 namespace VariacaoDoAtivo.Application
 {

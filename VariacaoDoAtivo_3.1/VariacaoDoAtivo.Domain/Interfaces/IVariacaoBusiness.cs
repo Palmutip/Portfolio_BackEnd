@@ -1,7 +1,5 @@
 ﻿using SS.Tecnologia.YahooFinance.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace VariacaoDoAtivo.Domain
 {

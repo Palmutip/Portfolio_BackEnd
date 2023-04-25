@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VariacaoDoAtivo.Auth.Models
+﻿namespace VariacaoDoAtivo.Auth.Models
 {
     public class Settings
     {

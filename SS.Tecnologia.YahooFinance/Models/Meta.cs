@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SS.Tecnologia.YahooFinance.Models
 {
@@ -11,11 +7,11 @@ namespace SS.Tecnologia.YahooFinance.Models
         public Meta()
         {
             Timestamp = string.Empty;
-            Symbol= string.Empty;
+            Symbol = string.Empty;
             ExchangeName = string.Empty;
-            InstrumentType= string.Empty;
-            Timezone= string.Empty;
-            ExchangeTimezoneName= string.Empty;
+            InstrumentType = string.Empty;
+            Timezone = string.Empty;
+            ExchangeTimezoneName = string.Empty;
             DataGranularity = string.Empty;
             Range = string.Empty;
         }

@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using SS.Tecnologia.YahooFinance.Inferfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using VariacaoDoAtivo.Auth.Services;
 using VariacaoDoAtivo.Domain;
 

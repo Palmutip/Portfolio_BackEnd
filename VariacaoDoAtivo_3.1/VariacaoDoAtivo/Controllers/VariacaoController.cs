@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SS.Tecnologia.YahooFinance;
 using VariacaoDoAtivo.Application;
 
@@ -30,7 +29,7 @@ namespace VariacaoDoAtivo.Controllers
         [HttpPost]
         public IActionResult Post(string identificacaoAtivo, Intervalo intervalo, string range = "")
         {
-            return Ok(this.variacaoService.Post(identificacaoAtivo,intervalo,range));
+            return Ok(this.variacaoService.Post(identificacaoAtivo, intervalo, range));
         }
 
         [HttpPut]

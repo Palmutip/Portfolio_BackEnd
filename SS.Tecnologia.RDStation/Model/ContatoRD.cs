@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SS.Tecnologia.RDStation.Model
+﻿namespace SS.Tecnologia.RDStation.Model
 {
     /// <summary>
     /// Campos padrão para os contatos cadastrados na RD Station
@@ -17,7 +11,7 @@ namespace SS.Tecnologia.RDStation.Model
             name = string.Empty;
             job_title = string.Empty;
             state = string.Empty;
-            city = string.Empty;    
+            city = string.Empty;
             mobile_phone = string.Empty;
             website = string.Empty;
             personal_phone = string.Empty;
