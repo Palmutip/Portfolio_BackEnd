@@ -1,11 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using SS.Tecnologia.YahooFinance.Models;
+﻿using SS.Tecnologia.YahooFinance.Models;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 
 namespace VariacaoDoAtivo.Domain.Business
 {

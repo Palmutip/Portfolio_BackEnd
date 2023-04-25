@@ -3,7 +3,6 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using VariacaoDoAtivo.Application;
 using VariacaoDoAtivo.Domain;
 using Xunit;
 
@@ -21,7 +20,7 @@ namespace VariacaoDoAtivo.Application.Tests
         [Fact]
         public void Post_EnviaIDValido()
         {
-            var exception = Assert.Throws<Exception>(() => usuarioService.Post(new UsuarioViewModel { Id = Guid.NewGuid()}));
+            var exception = Assert.Throws<Exception>(() => usuarioService.Post(new UsuarioViewModel { Id = Guid.NewGuid() }));
             Assert.Equal("ID do usuário deve ser vazio!", exception.Message);
         }
 

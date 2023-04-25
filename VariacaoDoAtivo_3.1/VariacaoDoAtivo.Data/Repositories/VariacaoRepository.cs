@@ -1,10 +1,6 @@
-﻿using VariacaoDoAtivo.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore;
+﻿using System.Collections.Generic;
 using System.Linq;
+using VariacaoDoAtivo.Domain;
 
 namespace VariacaoDoAtivo.Data
 {

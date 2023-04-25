@@ -15,7 +15,7 @@ namespace VariacaoDoAtivo.Swagger
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "Variação do Ativo .NET Core",
-                    Version= "v1",
+                    Version = "v1",
                     Description = "Projeto desenvolvido com .NET Core e Angular a titulo de portfólio.",
                     Contact = new OpenApiContact
                     {

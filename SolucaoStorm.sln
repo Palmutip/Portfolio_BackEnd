@@ -45,7 +45,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Auth", "Var
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Tests", "0-Tests", "{5037952C-42E5-4612-8E6F-452ED6E373DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariacaoDoAtivo.Application.Tests", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application.Tests\VariacaoDoAtivo.Application.Tests.csproj", "{DD0715F4-AE5C-4218-A63D-79D56009DE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Application.Tests", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application.Tests\VariacaoDoAtivo.Application.Tests.csproj", "{DD0715F4-AE5C-4218-A63D-79D56009DE55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{76DC5BB9-6789-418D-9924-7881909BC659}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

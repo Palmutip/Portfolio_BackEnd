@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VariacaoDoAtivo.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace VariacaoDoAtivo.Data
 {

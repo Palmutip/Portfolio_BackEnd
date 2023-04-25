@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SS.Tecnologia.HCIEnviaZAP.Models
+﻿namespace SS.Tecnologia.HCIEnviaZAP.Models
 {
     public class EnviaZapDTO
     {
@@ -15,7 +9,7 @@ namespace SS.Tecnologia.HCIEnviaZAP.Models
         public string Ddi;
 
 
-        public EnviaZapDTO() 
+        public EnviaZapDTO()
         {
             DDI = string.Empty;
             DDD = string.Empty;

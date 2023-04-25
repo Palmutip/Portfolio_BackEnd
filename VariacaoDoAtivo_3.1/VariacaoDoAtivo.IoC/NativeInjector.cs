@@ -1,12 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SS.Tecnologia.YahooFinance.Inferfaces;
+using SS.Tecnologia.YahooFinance.Services;
 using VariacaoDoAtivo.Application;
 using VariacaoDoAtivo.Data;
 using VariacaoDoAtivo.Domain;
-using SS.Tecnologia.YahooFinance.Inferfaces;
-using SS.Tecnologia.YahooFinance.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using VariacaoDoAtivo.Domain.Business;
 
 namespace VariacaoDoAtivo.IoC

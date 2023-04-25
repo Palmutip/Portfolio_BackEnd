@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SS.Tecnologia.RDStation.Model
+﻿namespace SS.Tecnologia.RDStation.Model
 {
     /// <summary>
     /// Classe padrão que representa o token de acesso, o refresh token e o periodo até expirar o acesso
     /// </summary>
     public class Token
     {
-        public Token() 
+        public Token()
         {
             AccessToken = string.Empty;
             ExpiresIn = string.Empty;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SS.Tecnologia.YahooFinance
+﻿namespace SS.Tecnologia.YahooFinance
 {
     /// <summary>
     /// Tipos de intervalo possiveis no filtro

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SS.Tecnologia.RDStation.Model
+﻿namespace SS.Tecnologia.RDStation.Model
 {
     /// <summary>
     /// Objeto referente aos dados obrigatórios para acesso à API da RD Station
@@ -14,8 +8,8 @@ namespace SS.Tecnologia.RDStation.Model
         public ClientCredential()
         {
             ClientId = string.Empty;
-            ClientSecret= string.Empty;
-            RefreshToken= string.Empty;
+            ClientSecret = string.Empty;
+            RefreshToken = string.Empty;
         }
 
         /// <summary>

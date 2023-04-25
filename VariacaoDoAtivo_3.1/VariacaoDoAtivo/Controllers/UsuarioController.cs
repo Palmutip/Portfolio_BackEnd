@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using VariacaoDoAtivo.Application;
 using VariacaoDoAtivo.Auth.Services;
-using VariacaoDoAtivo.Domain;
-    
+
 namespace VariacaoDoAtivo.Controllers
 {
     [Route("api/[controller]"), ApiController, Authorize]

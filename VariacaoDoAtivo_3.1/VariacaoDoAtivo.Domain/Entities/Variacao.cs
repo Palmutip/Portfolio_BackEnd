@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VariacaoDoAtivo.Domain
+﻿namespace VariacaoDoAtivo.Domain
 {
     public class Variacao : Entity
     {
