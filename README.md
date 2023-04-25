@@ -7,7 +7,7 @@ As pastas com prefixo SS.Tecnologia são projetos de integrações com serviços
  + RD Station
  + Yahoo Finance
  + HCI Enviazap e 
- + em breve com o Exact Spotter da Exact Sales.
+ + Exact Spotter da Exact Sales.
 
 ### Projetos
 
