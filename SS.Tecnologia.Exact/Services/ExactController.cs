@@ -134,7 +134,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     Agendamentos = retorno;
 
-                    return Agendamentos.value[0].startTime;
+                    return Agendamentos.value.FirstOrDefault().startTime;
                 }
             }
             catch (HttpRequestException ex)
@@ -167,7 +167,7 @@ namespace SS.Tecnologia.Exact.Services
                     ExactCustomFields retorno = JsonConvert.DeserializeObject<ExactCustomFields>(dados.Content.ReadAsStringAsync().Result);
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -248,7 +248,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -282,7 +282,7 @@ namespace SS.Tecnologia.Exact.Services
                     //Thread.Sleep(4000);
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -316,7 +316,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -350,7 +350,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -384,7 +384,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)
@@ -418,7 +418,7 @@ namespace SS.Tecnologia.Exact.Services
 
                     retornoAPI = retorno;
 
-                    return null == retornoAPI.value[0].options[0] ? null : retornoAPI.value[0].options[0];
+                    return null == retornoAPI.value.FirstOrDefault().options.FirstOrDefault() ? null : retornoAPI.value.FirstOrDefault().options.FirstOrDefault();
                 }
             }
             catch (HttpRequestException ex)

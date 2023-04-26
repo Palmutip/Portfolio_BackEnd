@@ -52,6 +52,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bibliotecas", "Bibliotecas", "{AFEC25DD-266F-43D4-8823-D6B82F438E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.Tecnologia.Commom", "SS.Tecnologia.Commom\SS.Tecnologia.Commom.csproj", "{53244E4F-0F32-4629-9AD4-B99CFA2D556A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +110,10 @@ Global
 		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD0715F4-AE5C-4218-A63D-79D56009DE55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +139,7 @@ Global
 		{251F925D-BB2C-4B51-9D84-0442A8105AAC} = {ADB24DFD-6FCC-42DB-B605-225F47C1A634}
 		{5037952C-42E5-4612-8E6F-452ED6E373DC} = {F8CF0E78-67B3-4B20-B3F3-4CE9C991C695}
 		{DD0715F4-AE5C-4218-A63D-79D56009DE55} = {5037952C-42E5-4612-8E6F-452ED6E373DC}
+		{53244E4F-0F32-4629-9AD4-B99CFA2D556A} = {AFEC25DD-266F-43D4-8823-D6B82F438E82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A26576C-98A7-4C14-9761-8A7A31FD31F5}
