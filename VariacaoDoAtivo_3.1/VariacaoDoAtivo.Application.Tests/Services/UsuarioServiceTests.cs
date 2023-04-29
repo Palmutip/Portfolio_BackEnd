@@ -55,7 +55,7 @@ namespace VariacaoDoAtivo.Application.Tests
         [Fact]
         public void Post_EnviandoObjetoValido()
         {
-            var result = usuarioService.Post(new UsuarioViewModel { Nome = "Pedro Palmuti", Email = "palmutip@hotmail.com" });
+            var result = usuarioService.Post(new UsuarioViewModel { Nome = "Pedro Palmuti", Email = "palmutip@hotmail.com", Senha = "Teste123456789" });
             Assert.True(result);
         }
 

@@ -41,6 +41,7 @@ registerLocaleData(localePt);
       Interceptor,
       FontAwesomeModule,
       ToastrModule.forRoot({
+        progressBar: true
         // positionClass: "toast-bottom-right",
         // preventDuplicates: true,
         // timeOut: 15000,

@@ -11,8 +11,8 @@ export class VariacaoDataService {
         return this.http.get(this.module);
     }
 
-    post(ativo, intervalo, range) {
-        return this.http.post(this.module + '?identificacaoAtivo=' + ativo + '&intervalo=' + intervalo + '&range=' + range, ativo);
+    post(variacaoRequest) {
+        return this.http.post(this.module, variacaoRequest);
     }
 
     put(dados) {
