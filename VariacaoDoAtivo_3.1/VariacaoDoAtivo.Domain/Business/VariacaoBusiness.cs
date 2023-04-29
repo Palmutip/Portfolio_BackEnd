@@ -22,9 +22,9 @@ namespace VariacaoDoAtivo.Domain.Business
 
             var chart = dadosYahoo.Chart?.Result?.FirstOrDefault();
 
-            if (chart == null)
+            if (chart == null || chart.Meta?.FirstTradeDate == null)
             {
-                return new List<Variacao>();
+                throw new Exception($"Não foram encontrados dados referente ao ativo {chart.Meta?.Symbol}!");
             }
 
             var periodos = chart.Timestamp;

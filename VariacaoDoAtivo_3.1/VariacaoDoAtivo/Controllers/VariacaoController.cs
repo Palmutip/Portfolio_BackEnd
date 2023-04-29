@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SS.Tecnologia.YahooFinance;
+using System;
 using VariacaoDoAtivo.Application;
 
 namespace VariacaoDoAtivo.Controllers
@@ -27,9 +28,9 @@ namespace VariacaoDoAtivo.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(string identificacaoAtivo, Intervalo intervalo, string range = "")
+        public IActionResult Post(VariacaoRequestViewModel variacaoRequestViewModel)
         {
-            return Ok(this.variacaoService.Post(identificacaoAtivo, intervalo, range));
+            return Ok(this.variacaoService.Post(variacaoRequestViewModel));
         }
 
         [HttpPut]

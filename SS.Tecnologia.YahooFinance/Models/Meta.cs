@@ -20,7 +20,7 @@ namespace SS.Tecnologia.YahooFinance.Models
         public string Symbol { get; set; }
         public string ExchangeName { get; set; }
         public string InstrumentType { get; set; }
-        public int FirstTradeDate { get; set; }
+        public int? FirstTradeDate { get; set; }
         public int RegularMarketTime { get; set; }
         public int GmtOffset { get; set; }
         public string Timezone { get; set; }

@@ -61,7 +61,9 @@ namespace SS.Tecnologia.YahooFinance.Services
                         sb.Append(range);
                     }
 
-                    var response = await client.GetAsync(sb.ToString());
+                    var url = sb.ToString();
+
+                    var response = await client.GetAsync(url);
 
                     if (response.StatusCode != System.Net.HttpStatusCode.OK)
                         throw new Exception("Retorno da API foi diferente de OK");
@@ -85,7 +87,6 @@ namespace SS.Tecnologia.YahooFinance.Services
                 throw new Exception(ex.Message, ex);
             }
         }
-
 
         /// <summary>
         /// Método responsável por consultar a variação de determinado ativo conforme seu nome de identificaçã
@@ -135,7 +136,9 @@ namespace SS.Tecnologia.YahooFinance.Services
                         sb.Append(range);
                     }
 
-                    var response = client.GetAsync(sb.ToString());
+                    var url = sb.ToString();
+
+                    var response = client.GetAsync(url);
 
                     if (response.Result.StatusCode != System.Net.HttpStatusCode.OK)
                         throw new Exception("Retorno da API foi diferente de OK");

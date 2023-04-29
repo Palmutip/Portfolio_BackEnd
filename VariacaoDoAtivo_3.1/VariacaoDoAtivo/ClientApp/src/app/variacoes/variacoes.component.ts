@@ -11,6 +11,7 @@ export class VariacoesComponent implements OnInit {
 
   variacoes: any[] = [];
   variacao: any = {};
+  variacaoRequest: any = {};
   showList: boolean = true;
   identificacaoAtivo: string = "";
   intervalo: number = 1;
@@ -34,7 +35,7 @@ export class VariacoesComponent implements OnInit {
       if(this.variacoes.length > 0)
         this.possuiDados = true;
     }, erro => {
-      this.toastr.warning('erro interno do sistema');
+      this.toastr.error('erro interno do sistema');
     })
   }
 
@@ -48,18 +49,23 @@ export class VariacoesComponent implements OnInit {
   }
 
     post() {
-        this.variacaoDataService.post(this.identificacaoAtivo, this.intervalo, this.range).subscribe(d => {
+        this.variacaoDataService.post(this.variacaoRequest).subscribe(d => {
       if (d == true) {
         this.toastr.success('Variação cadastrada com sucesso');
         this.get();
         this.variacao = {};
       }
       else {
-        alert('Erro ao cadastrar');
+        this.toastr.error('Erro ao cadastrar');
       }
     }, erro => {
-      console.log(erro);
-      alert('erro interno do sistema');
+      try{
+        this.toastr.error(erro.error.toString().split('\r\n')[0].replace('System.Exception: ', ''), 'Erro');
+        //this.get();
+      }
+      catch(error){
+        this.toastr.error('erro interno do sistema');
+      }
     })
   }
 
@@ -71,11 +77,10 @@ export class VariacoesComponent implements OnInit {
         this.variacao = {};
       }
       else {
-        this.toastr.warning('Erro ao atualizar');
+        this.toastr.error('Erro ao atualizar');
       }
     }, erro => {
-      console.log(erro);
-      this.toastr.warning('erro interno do sistema');
+      this.toastr.error('erro interno do sistema');
     })
   }
 
@@ -88,11 +93,10 @@ export class VariacoesComponent implements OnInit {
         this.possuiDados = false;
       }
       else {
-        this.toastr.warning('Erro ao excluir');
+        this.toastr.error('Erro ao excluir');
       }
     }, erro => {
-      console.log(erro);
-      this.toastr.warning('erro interno do sistema');
+      this.toastr.error('erro interno do sistema');
     })
   }
 

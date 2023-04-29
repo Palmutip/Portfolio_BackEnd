@@ -3,6 +3,7 @@ using SS.Tecnologia.YahooFinance;
 using SS.Tecnologia.YahooFinance.Inferfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using VariacaoDoAtivo.Domain;
 
 namespace VariacaoDoAtivo.Application
@@ -43,9 +44,11 @@ namespace VariacaoDoAtivo.Application
             return mapper.Map<VariacaoViewModel>(_variacao);
         }
 
-        public bool Post(string identificacaoAtivo, Intervalo intervalo, string range = "")
+        public bool Post(VariacaoRequestViewModel variacaoRequestViewModel)
         {
-            this.variacaoRepository.Create(this.variacaoBusiness.RetornaVariacoes(this.yahooFinanceService.ConsultaAtivo(identificacaoAtivo, intervalo, range)));
+            Validator.ValidateObject(variacaoRequestViewModel, new ValidationContext(variacaoRequestViewModel), true);
+
+            this.variacaoRepository.Create(this.variacaoBusiness.RetornaVariacoes(this.yahooFinanceService.ConsultaAtivo(variacaoRequestViewModel.IdentificacaoAtivo, variacaoRequestViewModel.Intervalo, variacaoRequestViewModel.Range)));
 
             return true;
         }

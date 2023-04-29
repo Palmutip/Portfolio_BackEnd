@@ -7,7 +7,7 @@ namespace VariacaoDoAtivo.Application
     {
         List<VariacaoViewModel> Get();
         VariacaoViewModel GetById(int dia);
-        bool Post(string identificacaoAtivo, Intervalo intervalo, string range = "");
+        bool Post(VariacaoRequestViewModel variacaoRequestViewModel);
         bool Put(VariacaoViewModel variacaoViewModel);
         bool Delete(string id);
         bool Delete();
