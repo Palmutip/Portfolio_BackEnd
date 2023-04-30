@@ -42,11 +42,6 @@ registerLocaleData(localePt);
       FontAwesomeModule,
       ToastrModule.forRoot({
         progressBar: true
-        // positionClass: "toast-bottom-right",
-        // preventDuplicates: true,
-        // timeOut: 15000,
-        // easing: 'ease-in',
-        // easeTime: 1500
       })
     ],
     providers: [

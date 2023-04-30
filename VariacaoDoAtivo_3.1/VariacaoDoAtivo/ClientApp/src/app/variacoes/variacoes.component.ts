@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { VariacaoDataService } from '../_data-services/variacao.data-service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-variacoes',
   templateUrl: './variacoes.component.html',
   styleUrls: ['./variacoes.component.css']
 })
-export class VariacoesComponent implements OnInit {
+export class VariacoesComponent implements OnInit, AfterViewInit  {
 
   variacoes: any[] = [];
   variacao: any = {};
@@ -23,14 +24,29 @@ export class VariacoesComponent implements OnInit {
     private toastr: ToastrService
   ) { }
 
+  //@ViewChild("ChartPercent", {static: false}) chartPercent: ElementRef
+  //@ViewChild("ChartValues", {static: false}) chartValues: ElementRef
+
   ngOnInit() {
     this.get();
+  }
+
+  ngAfterViewInit() {
+    //this.get();
+    // console.log(this.possuiDados);
+    // //this.possuiDados = true;
+    // console.log(this.chartPercent);
+    // console.log(this.chartValues);
+
+    // if(this.possuiDados)
+    //   this.displayCharts();
   }
 
   get() {
     this.variacaoDataService.get().subscribe((dados: any[]) => {
       this.variacoes = dados;
       this.showList = true;
+      //this.displayCharts();
 
       if(this.variacoes.length > 0)
         this.possuiDados = true;
@@ -48,7 +64,7 @@ export class VariacoesComponent implements OnInit {
     }
   }
 
-    post() {
+  post() {
         this.variacaoDataService.post(this.variacaoRequest).subscribe(d => {
       if (d == true) {
         this.toastr.success('Variação cadastrada com sucesso');
@@ -61,7 +77,6 @@ export class VariacoesComponent implements OnInit {
     }, erro => {
       try{
         this.toastr.error(erro.error.toString().split('\r\n')[0].replace('System.Exception: ', ''), 'Erro');
-        //this.get();
       }
       catch(error){
         this.toastr.error('erro interno do sistema');
@@ -100,4 +115,72 @@ export class VariacoesComponent implements OnInit {
     })
   }
 
+  displayCharts(){
+    //debugger;
+    //console.log(this.chartPercent);
+    // new Chart(this.chartPercent.nativeElement, {
+    //   type: 'line',
+    //   data: {
+    //     labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+    //     datasets: [
+    //       {
+    //         label: "valor 1",
+    //         borderColor: "#88001b",
+    //         fill: false,
+    //         data: [52,46,75,39,85,67,49,52,74,25,12,54]
+    //       },
+    //       {
+    //         label: "valor 2",
+    //         borderColor: "#3f48cc",
+    //         fill: false,
+    //         data: [43,75,43,86,41,45,78,52,97,45,57,85]
+    //       }
+    //     ]
+    //   },
+    //   options: {
+    //     responsive: true,
+    //     plugins: {
+    //       legend: {
+    //         position: 'top',
+    //       },
+    //       title: {
+    //         display: true,
+    //         text: 'Chart.js Line Chart'
+    //       }
+    //     }
+    //   }
+    // });
+    // new Chart(this.chartValues.nativeElement, {
+    //   type: 'line',
+    //   data: {
+    //     labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+    //     datasets: [
+    //       {
+    //         label: "valor 1",
+    //         borderColor: "#88001b",
+    //         fill: false,
+    //         data: [52,46,75,39,85,67,49,52,74,25,12,54]
+    //       },
+    //       {
+    //         label: "valor 2",
+    //         borderColor: "#3f48cc",
+    //         fill: false,
+    //         data: [43,75,43,86,41,45,78,52,97,45,57,85]
+    //       }
+    //     ]
+    //   },
+    //   options: {
+    //     responsive: true,
+    //     plugins: {
+    //       legend: {
+    //         position: 'top',
+    //       },
+    //       title: {
+    //         display: true,
+    //         text: 'Chart.js Line Chart'
+    //       }
+    //     }
+    //   }
+    // });
+  }
 }
