@@ -5,6 +5,7 @@
 </header>
 <main>
   <section>
+    <div id="DivCapa">
     <p>
       <span>
         Seja bem vindo ao meu portfólio de back-end. Este site foi feito com a proposta de demonstrar meu conhecimento com C#, .NET Core, Testes unitários e a abordagem DDD.
@@ -26,8 +27,10 @@
         <a [routerLink]="['/variacoes']" target="_blank">Consulta de Ativos</a>
       </li>
     </ul> 
+  </div>
   </section>
   <section>
+    <div id="DivToastr">
     <p>
       <span>
         Tambem foram incluídos alguns componentes de Front-End para demonstrar minha familiaridade com o assunto. São eles:
@@ -48,12 +51,16 @@
         <button (click)="ShowInformation()" class="btn btn-primary">toastr Informação</button>
       </li>
     </ul>
+  </div>
+  <div id="DivFontAwesome">
     <h4>Font awesome Icons</h4>
     <ul style="list-style: none;">
       <li><fa-icon [icon]="faNewspaper"></fa-icon> Notícias atualizadas sobre o mercado financeiro</li>
       <li><fa-icon [icon]="faChartLine"></fa-icon> Gráficos atualizados em tempo real</li>
       <li><fa-icon [icon]="faMoneyBillAlt"></fa-icon> Cotações das principais moedas</li>
     </ul>
+  </div>
+  <div id="DivBootstrap">
     <h4>Bootstrap</h4>
     <div style="display: flex;">
       <div style="width: 100%; padding-inline: 8px; border: double;">
@@ -106,7 +113,12 @@
         </form>
       </div>
     </div>
-    
+  </div>
+  <div id="DivChartJS" style="padding-block: 8px;"></div>
+    <h4>Chart JS</h4>
+    <div>
+      <canvas #MyCanvas></canvas>
+    </div>
   </section>
 </main>
 <footer style="background-color: #0e2431;color: #fff;text-align: center; margin-top: 16px;">
