@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{8EC01D29-5D2C-4C3C-9E1E-EC2C165E840D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EBB04E96-C736-404B-A5CD-A003C47C1406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "CadastroClientesMVC\WebApp.csproj", "{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{FA18B19C-219A-4FCC-85F2-B30ED98FB647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Objetos", "CadastroClientes.Objetos\CadastroClientes.Objetos.csproj", "{1204A315-807C-4C0E-AE7E-D6D19160B56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Regras", "CadastroClientes.Regras\CadastroClientes.Regras.csproj", "{B6A850A5-6D4E-4D82-909B-37A91EAC309C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8CE9FDB3-B912-4A2A-9C2D-8CE282F5520B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{8AA71FE8-4190-43BB-877B-705AC045ABBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessADO", "DataAccessADO\DataAccessADO.csproj", "{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApp", "CastroClientesWebForms\WebFormsApp.csproj", "{CD403BD1-579E-46FA-A428-11EF6CF1972D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compartilhado", "Compartilhado", "{5C5D1B5A-45F8-40E4-A939-5AB9FC23CB8A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Comuns", "Comuns\Comuns.shproj", "{0C971653-BE72-458A-82A0-6BF10F3DAE55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9} = {EBB04E96-C736-404B-A5CD-A003C47C1406}
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F} = {FA18B19C-219A-4FCC-85F2-B30ED98FB647}
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C} = {FA18B19C-219A-4FCC-85F2-B30ED98FB647}
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF} = {8CE9FDB3-B912-4A2A-9C2D-8CE282F5520B}
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F} = {8CE9FDB3-B912-4A2A-9C2D-8CE282F5520B}
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D} = {EBB04E96-C736-404B-A5CD-A003C47C1406}
+		{0C971653-BE72-458A-82A0-6BF10F3DAE55} = {5C5D1B5A-45F8-40E4-A939-5AB9FC23CB8A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9503E4E0-F480-44F4-B3A9-BBEAFC216C3B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Comuns\Comuns.projitems*{0c971653-be72-458a-82a0-6bf10f3dae55}*SharedItemsImports = 13
+		Comuns\Comuns.projitems*{8aa71fe8-4190-43bb-877b-705ac045abbf}*SharedItemsImports = 4
+		Comuns\Comuns.projitems*{c33111cb-d49b-4814-993d-2fd9cb9b3b0f}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

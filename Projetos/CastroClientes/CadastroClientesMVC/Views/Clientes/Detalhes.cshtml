@@ -1,0 +1,51 @@
+﻿@model CadastroClientes.Objetos.ClienteDTO
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Nascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Nascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Cadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Cadastro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href="@Url.Action("Index")"><i style="margin-right: 4px;" class="bi bi-arrow-left-circle"></i>Voltar</a>
+    <a style="margin-right: 8px;" class="btn btn-primary" href="@Url.Action("Editar", new { id = Model.ID })"><i style="margin-right: 4px;" class="bi bi-pencil"></i>Editar</a>
+</p>

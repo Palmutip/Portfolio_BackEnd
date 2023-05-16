@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{6A278EA8-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projetos", "Projetos", "{6ED27A8B-B3CF-42AF-84EE-EE621C414357}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.Exact", "SS.Tecnologia.Exact\SS.Tecnologia.Exact.csproj", "{990E8264-C595-4DD0-A1AB-5094874F75E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.Exact", "Bibliotecas\SS.Tecnologia.Exact\SS.Tecnologia.Exact.csproj", "{990E8264-C595-4DD0-A1AB-5094874F75E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.HCIEnviaZAP", "SS.Tecnologia.HCIEnviaZAP\SS.Tecnologia.HCIEnviaZAP.csproj", "{B9BA5A43-51DD-4FC6-B1E7-4EFC5914D604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.HCIEnviaZAP", "Bibliotecas\SS.Tecnologia.HCIEnviaZAP\SS.Tecnologia.HCIEnviaZAP.csproj", "{B9BA5A43-51DD-4FC6-B1E7-4EFC5914D604}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.RDStation", "SS.Tecnologia.RDStation\SS.Tecnologia.RDStation.csproj", "{8A223124-63C4-4849-AB73-98245A30421D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.RDStation", "Bibliotecas\SS.Tecnologia.RDStation\SS.Tecnologia.RDStation.csproj", "{8A223124-63C4-4849-AB73-98245A30421D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VariacaoDoAtivo", "VariacaoDoAtivo", "{F8CF0E78-67B3-4B20-B3F3-4CE9C991C695}"
 EndProject
@@ -27,25 +27,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{43
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{ADB24DFD-6FCC-42DB-B605-225F47C1A634}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo", "VariacaoDoAtivo_3.1\VariacaoDoAtivo\VariacaoDoAtivo.csproj", "{537BDC36-50F5-4A42-A963-C39FF4A30F5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo\VariacaoDoAtivo.csproj", "{537BDC36-50F5-4A42-A963-C39FF4A30F5D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Application", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application\VariacaoDoAtivo.Application.csproj", "{B6977096-37B2-4B53-9AB5-B84A103FFC24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Application", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application\VariacaoDoAtivo.Application.csproj", "{B6977096-37B2-4B53-9AB5-B84A103FFC24}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Domain", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Domain\VariacaoDoAtivo.Domain.csproj", "{0779F9FB-B2D4-4BD7-BD6B-C5FC0663FD3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Domain", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Domain\VariacaoDoAtivo.Domain.csproj", "{0779F9FB-B2D4-4BD7-BD6B-C5FC0663FD3D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Data", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Data\VariacaoDoAtivo.Data.csproj", "{F0A6D59E-3B06-4846-B012-22F9C0D7C106}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Data", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Data\VariacaoDoAtivo.Data.csproj", "{F0A6D59E-3B06-4846-B012-22F9C0D7C106}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.IoC", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj", "{71F5382F-6C10-4866-BC94-442592FE3720}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.IoC", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj", "{71F5382F-6C10-4866-BC94-442592FE3720}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.YahooFinance", "SS.Tecnologia.YahooFinance\SS.Tecnologia.YahooFinance.csproj", "{AC1C3832-630E-4EFA-B865-E78DF97C8DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.YahooFinance", "Bibliotecas\SS.Tecnologia.YahooFinance\SS.Tecnologia.YahooFinance.csproj", "{AC1C3832-630E-4EFA-B865-E78DF97C8DBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Swagger", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj", "{3D48CC01-1B31-4B1E-8014-DB02BD99BB99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Swagger", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj", "{3D48CC01-1B31-4B1E-8014-DB02BD99BB99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Auth", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj", "{251F925D-BB2C-4B51-9D84-0442A8105AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Auth", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Auth\VariacaoDoAtivo.Auth.csproj", "{251F925D-BB2C-4B51-9D84-0442A8105AAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Tests", "0-Tests", "{5037952C-42E5-4612-8E6F-452ED6E373DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Application.Tests", "VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application.Tests\VariacaoDoAtivo.Application.Tests.csproj", "{DD0715F4-AE5C-4218-A63D-79D56009DE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Application.Tests", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Application.Tests\VariacaoDoAtivo.Application.Tests.csproj", "{DD0715F4-AE5C-4218-A63D-79D56009DE55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{76DC5BB9-6789-418D-9924-7881909BC659}"
 	ProjectSection(SolutionItems) = preProject
@@ -54,7 +54,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bibliotecas", "Bibliotecas", "{AFEC25DD-266F-43D4-8823-D6B82F438E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS.Tecnologia.Commom", "SS.Tecnologia.Commom\SS.Tecnologia.Commom.csproj", "{53244E4F-0F32-4629-9AD4-B99CFA2D556A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.Commom", "Bibliotecas\SS.Tecnologia.Commom\SS.Tecnologia.Commom.csproj", "{53244E4F-0F32-4629-9AD4-B99CFA2D556A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CadastroDeClientes", "CadastroDeClientes", "{E7083769-1159-43C2-A48D-654F494E0A0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{8C7E5943-A263-4A34-8E84-0E55FC0D09CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compartilhado", "Compartilhado", "{91ABCDFF-94DE-4D39-8890-C29FE86AA07A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3CD8DE65-0C97-479F-A513-18C024B3131E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Objetos", "Projetos\CastroClientes\CadastroClientes.Objetos\CadastroClientes.Objetos.csproj", "{1204A315-807C-4C0E-AE7E-D6D19160B56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Regras", "Projetos\CastroClientes\CadastroClientes.Regras\CadastroClientes.Regras.csproj", "{B6A850A5-6D4E-4D82-909B-37A91EAC309C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Comuns", "Projetos\CastroClientes\Comuns\Comuns.shproj", "{0C971653-BE72-458A-82A0-6BF10F3DAE55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "Projetos\CastroClientes\DataAccess\DataAccess.csproj", "{8AA71FE8-4190-43BB-877B-705AC045ABBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessADO", "Projetos\CastroClientes\DataAccessADO\DataAccessADO.csproj", "{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "Projetos\CastroClientes\CadastroClientesMVC\WebApp.csproj", "{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApp", "Projetos\CastroClientes\CastroClientesWebForms\WebFormsApp.csproj", "{CD403BD1-579E-46FA-A428-11EF6CF1972D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desafios", "Desafios", "{CE07C6AF-991B-4495-9881-643D4968F669}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beecrowd", "Desafios\Beecrowd_Answers\Beecrowd.csproj", "{672A51EF-48F7-4161-87DA-AB052C09BFA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +142,34 @@ Global
 		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53244E4F-0F32-4629-9AD4-B99CFA2D556A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672A51EF-48F7-4161-87DA-AB052C09BFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672A51EF-48F7-4161-87DA-AB052C09BFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672A51EF-48F7-4161-87DA-AB052C09BFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672A51EF-48F7-4161-87DA-AB052C09BFA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,8 +196,26 @@ Global
 		{5037952C-42E5-4612-8E6F-452ED6E373DC} = {F8CF0E78-67B3-4B20-B3F3-4CE9C991C695}
 		{DD0715F4-AE5C-4218-A63D-79D56009DE55} = {5037952C-42E5-4612-8E6F-452ED6E373DC}
 		{53244E4F-0F32-4629-9AD4-B99CFA2D556A} = {AFEC25DD-266F-43D4-8823-D6B82F438E82}
+		{E7083769-1159-43C2-A48D-654F494E0A0F} = {6ED27A8B-B3CF-42AF-84EE-EE621C414357}
+		{8C7E5943-A263-4A34-8E84-0E55FC0D09CC} = {E7083769-1159-43C2-A48D-654F494E0A0F}
+		{91ABCDFF-94DE-4D39-8890-C29FE86AA07A} = {E7083769-1159-43C2-A48D-654F494E0A0F}
+		{3CD8DE65-0C97-479F-A513-18C024B3131E} = {E7083769-1159-43C2-A48D-654F494E0A0F}
+		{3CF3AAD6-02C3-4F40-8217-3073C0CCCF34} = {E7083769-1159-43C2-A48D-654F494E0A0F}
+		{1204A315-807C-4C0E-AE7E-D6D19160B56F} = {8C7E5943-A263-4A34-8E84-0E55FC0D09CC}
+		{B6A850A5-6D4E-4D82-909B-37A91EAC309C} = {8C7E5943-A263-4A34-8E84-0E55FC0D09CC}
+		{0C971653-BE72-458A-82A0-6BF10F3DAE55} = {91ABCDFF-94DE-4D39-8890-C29FE86AA07A}
+		{8AA71FE8-4190-43BB-877B-705AC045ABBF} = {3CD8DE65-0C97-479F-A513-18C024B3131E}
+		{C33111CB-D49B-4814-993D-2FD9CB9B3B0F} = {3CD8DE65-0C97-479F-A513-18C024B3131E}
+		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9} = {3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}
+		{CD403BD1-579E-46FA-A428-11EF6CF1972D} = {3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}
+		{672A51EF-48F7-4161-87DA-AB052C09BFA0} = {CE07C6AF-991B-4495-9881-643D4968F669}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A26576C-98A7-4C14-9761-8A7A31FD31F5}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Projetos\CastroClientes\Comuns\Comuns.projitems*{0c971653-be72-458a-82a0-6bf10f3dae55}*SharedItemsImports = 13
+		Projetos\CastroClientes\Comuns\Comuns.projitems*{8aa71fe8-4190-43bb-877b-705ac045abbf}*SharedItemsImports = 4
+		Projetos\CastroClientes\Comuns\Comuns.projitems*{c33111cb-d49b-4814-993d-2fd9cb9b3b0f}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
