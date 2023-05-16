@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CadastroClientes.Objetos.ClienteDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <button class="btn btn-primary" onclick="window.location.href='@Url.Action("Criar")'">Criar Novo</button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <span>Ações</span>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Nascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Cadastro)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <div style="display: flex;">
+                <button style="margin-right: 8px;" class="btn btn-primary" onclick="window.location.href='@Url.Action("Editar", new { id = item.ID })'">Editar</button>
+                <button style="margin-right: 8px;" class="btn btn-info" onclick="window.location.href='@Url.Action("Detalhes", new { id = item.ID })'">Detalhes</button>
+                <button style="margin-right: 8px;" class="btn btn-danger" onclick="window.location.href='@Url.Action("Deletar", new { id = item.ID })'">Deletar</button>
+            </div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Nascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Cadastro)
+        </td>
+    </tr>
+}
+
+</table>
