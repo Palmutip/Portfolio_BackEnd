@@ -66,19 +66,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3CD8DE65-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Objetos", "Projetos\CastroClientes\CadastroClientes.Objetos\CadastroClientes.Objetos.csproj", "{1204A315-807C-4C0E-AE7E-D6D19160B56F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Objetos", "Projetos\CadastroClientes\CadastroClientes.Objetos\CadastroClientes.Objetos.csproj", "{1204A315-807C-4C0E-AE7E-D6D19160B56F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Regras", "Projetos\CastroClientes\CadastroClientes.Regras\CadastroClientes.Regras.csproj", "{B6A850A5-6D4E-4D82-909B-37A91EAC309C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroClientes.Regras", "Projetos\CadastroClientes\CadastroClientes.Regras\CadastroClientes.Regras.csproj", "{B6A850A5-6D4E-4D82-909B-37A91EAC309C}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Comuns", "Projetos\CastroClientes\Comuns\Comuns.shproj", "{0C971653-BE72-458A-82A0-6BF10F3DAE55}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Comuns", "Projetos\CadastroClientes\Comuns\Comuns.shproj", "{0C971653-BE72-458A-82A0-6BF10F3DAE55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "Projetos\CastroClientes\DataAccess\DataAccess.csproj", "{8AA71FE8-4190-43BB-877B-705AC045ABBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "Projetos\CadastroClientes\DataAccess\DataAccess.csproj", "{8AA71FE8-4190-43BB-877B-705AC045ABBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessADO", "Projetos\CastroClientes\DataAccessADO\DataAccessADO.csproj", "{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessADO", "Projetos\CadastroClientes\DataAccessADO\DataAccessADO.csproj", "{C33111CB-D49B-4814-993D-2FD9CB9B3B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "Projetos\CastroClientes\CadastroClientesMVC\WebApp.csproj", "{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "Projetos\CadastroClientes\CadastroClientesMVC\WebApp.csproj", "{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApp", "Projetos\CastroClientes\CastroClientesWebForms\WebFormsApp.csproj", "{CD403BD1-579E-46FA-A428-11EF6CF1972D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApp", "Projetos\CadastroClientes\CadastroClientesWebForms\WebFormsApp.csproj", "{CD403BD1-579E-46FA-A428-11EF6CF1972D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desafios", "Desafios", "{CE07C6AF-991B-4495-9881-643D4968F669}"
 EndProject
@@ -220,8 +220,8 @@ Global
 		SolutionGuid = {7A26576C-98A7-4C14-9761-8A7A31FD31F5}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Projetos\CastroClientes\Comuns\Comuns.projitems*{0c971653-be72-458a-82a0-6bf10f3dae55}*SharedItemsImports = 13
-		Projetos\CastroClientes\Comuns\Comuns.projitems*{8aa71fe8-4190-43bb-877b-705ac045abbf}*SharedItemsImports = 4
-		Projetos\CastroClientes\Comuns\Comuns.projitems*{c33111cb-d49b-4814-993d-2fd9cb9b3b0f}*SharedItemsImports = 4
+		Projetos\CadastroClientes\Comuns\Comuns.projitems*{0c971653-be72-458a-82a0-6bf10f3dae55}*SharedItemsImports = 13
+		Projetos\CadastroClientes\Comuns\Comuns.projitems*{8aa71fe8-4190-43bb-877b-705ac045abbf}*SharedItemsImports = 4
+		Projetos\CadastroClientes\Comuns\Comuns.projitems*{c33111cb-d49b-4814-993d-2fd9cb9b3b0f}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
