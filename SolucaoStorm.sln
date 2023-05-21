@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{6A278EA8-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projetos", "Projetos", "{6ED27A8B-B3CF-42AF-84EE-EE621C414357}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.Exact", "Bibliotecas\SS.Tecnologia.Exact\SS.Tecnologia.Exact.csproj", "{990E8264-C595-4DD0-A1AB-5094874F75E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storm.Tecnologia.Exact", "Bibliotecas\Storm.Tecnologia.Exact\Storm.Tecnologia.Exact.csproj", "{990E8264-C595-4DD0-A1AB-5094874F75E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.HCIEnviaZAP", "Bibliotecas\SS.Tecnologia.HCIEnviaZAP\SS.Tecnologia.HCIEnviaZAP.csproj", "{B9BA5A43-51DD-4FC6-B1E7-4EFC5914D604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storm.Tecnologia.HCIEnviaZAP", "Bibliotecas\Storm.Tecnologia.HCIEnviaZAP\Storm.Tecnologia.HCIEnviaZAP.csproj", "{B9BA5A43-51DD-4FC6-B1E7-4EFC5914D604}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.RDStation", "Bibliotecas\SS.Tecnologia.RDStation\SS.Tecnologia.RDStation.csproj", "{8A223124-63C4-4849-AB73-98245A30421D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storm.Tecnologia.RDStation", "Bibliotecas\Storm.Tecnologia.RDStation\Storm.Tecnologia.RDStation.csproj", "{8A223124-63C4-4849-AB73-98245A30421D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VariacaoDoAtivo", "VariacaoDoAtivo", "{F8CF0E78-67B3-4B20-B3F3-4CE9C991C695}"
 EndProject
@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Data", "Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.IoC", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.IoC\VariacaoDoAtivo.IoC.csproj", "{71F5382F-6C10-4866-BC94-442592FE3720}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.YahooFinance", "Bibliotecas\SS.Tecnologia.YahooFinance\SS.Tecnologia.YahooFinance.csproj", "{AC1C3832-630E-4EFA-B865-E78DF97C8DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storm.Tecnologia.YahooFinance", "Bibliotecas\Storm.Tecnologia.YahooFinance\Storm.Tecnologia.YahooFinance.csproj", "{AC1C3832-630E-4EFA-B865-E78DF97C8DBF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariacaoDoAtivo.Swagger", "Projetos\VariacaoDoAtivo_3.1\VariacaoDoAtivo.Swagger\VariacaoDoAtivo.Swagger.csproj", "{3D48CC01-1B31-4B1E-8014-DB02BD99BB99}"
 EndProject
@@ -54,7 +54,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bibliotecas", "Bibliotecas", "{AFEC25DD-266F-43D4-8823-D6B82F438E82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SS.Tecnologia.Commom", "Bibliotecas\SS.Tecnologia.Commom\SS.Tecnologia.Commom.csproj", "{53244E4F-0F32-4629-9AD4-B99CFA2D556A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storm.Tecnologia.Commom", "Bibliotecas\Storm.Tecnologia.Commom\Storm.Tecnologia.Commom.csproj", "{53244E4F-0F32-4629-9AD4-B99CFA2D556A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CadastroDeClientes", "CadastroDeClientes", "{E7083769-1159-43C2-A48D-654F494E0A0F}"
 EndProject

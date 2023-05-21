@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <BaseOutputPath>..\..\..\Aplicativos\VariacaoDoAtivo\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Bibliotecas\SS.Tecnologia.YahooFinance\SS.Tecnologia.YahooFinance.csproj" />
+    <ProjectReference Include="..\..\..\Bibliotecas\Storm.Tecnologia.YahooFinance\Storm.Tecnologia.YahooFinance.csproj" />
   </ItemGroup>
 
 </Project>

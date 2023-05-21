@@ -6,6 +6,7 @@
     <RootNamespace>_1017</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <BaseOutputPath>..\..\Aplicativos\Beecrowd\</BaseOutputPath>
   </PropertyGroup>
 
 </Project>
