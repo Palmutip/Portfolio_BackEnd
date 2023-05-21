@@ -1,5 +1,9 @@
 # Seja bem vindo(a) ao meu repositório de Back-end 👋
 
+Este repositório conta com projetos do tipo biblioteca de classes para realização de integrações e tambem para centralizar funções de uso commum entre os projetos.
+
+Também existe um projeto com desafios de código referente à plataforma Beecrowd (antigo URI Online Judge) e projetos criados utilizando diferentes arquiteturas como DDD e 3 camadas.
+
 ## Integrações
 
 As pastas com prefixo Storm.Tecnologia são projetos de integrações com serviços de outras plataformas, sendo elas:
@@ -26,7 +30,7 @@ Para executar em sua máquina, será necessário abrir a solução com o Visual 
 
 ### Cadastro de Clientes
 
-Trata-se de um projeto realizado para uma prova de para a startup DevLean
+Trata-se de um projeto realizado para a startup DevLean.
 
 O projeto foi construído com .Net Framework 4.8 e utiliza duas soluções do tipo Web Application para resolver o problema, sendo uma construída em MVC e outra com Web Forms. Todas as soluções foram construídas utilizando a arquitetura de 3 camadas (3 Layer Architecture).
 
