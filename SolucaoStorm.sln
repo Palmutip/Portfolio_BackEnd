@@ -84,6 +84,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desafios", "Desafios", "{CE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beecrowd", "Desafios\Beecrowd_Answers\Beecrowd.csproj", "{672A51EF-48F7-4161-87DA-AB052C09BFA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts Banco de Dados", "Scripts Banco de Dados", "{D08D0A1C-B8B1-4B97-BEFD-844C6CF4FF4E}"
+	ProjectSection(SolutionItems) = preProject
+		Projetos\VariacaoDoAtivo_3.1\Scripts\CadastroClientes.sql = Projetos\VariacaoDoAtivo_3.1\Scripts\CadastroClientes.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +214,7 @@ Global
 		{6A4E2C9C-5C55-4E7E-A313-5B591D8B44F9} = {3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}
 		{CD403BD1-579E-46FA-A428-11EF6CF1972D} = {3CF3AAD6-02C3-4F40-8217-3073C0CCCF34}
 		{672A51EF-48F7-4161-87DA-AB052C09BFA0} = {CE07C6AF-991B-4495-9881-643D4968F669}
+		{D08D0A1C-B8B1-4B97-BEFD-844C6CF4FF4E} = {E7083769-1159-43C2-A48D-654F494E0A0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A26576C-98A7-4C14-9761-8A7A31FD31F5}
